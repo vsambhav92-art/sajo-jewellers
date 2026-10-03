@@ -1,0 +1,2255 @@
+/* =====================================================
+   SAJO JEWELLERS — PREMIUM LUXURY STYLE
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --emerald: #062d25;
+    --emerald-dark: #031c17;
+    --emerald-light: #0b3d32;
+
+    --gold: #c9a45c;
+    --gold-light: #e1c78e;
+
+    --ivory: #f7f2e8;
+    --cream: #eee5d5;
+
+    --black: #10100e;
+    --text: #292823;
+    --muted: #777267;
+
+    --line: rgba(201, 164, 92, 0.35);
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: var(--ivory);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =====================================================
+   ANNOUNCEMENT
+===================================================== */
+
+.announcement {
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    background: var(--gold);
+    color: #19150d;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(3, 28, 23, 0.97);
+    border-bottom: 1px solid var(--line);
+}
+
+.navbar {
+    min-height: 82px;
+    padding: 0 5.5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* LOGO */
+
+.brand {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.brand span {
+    color: var(--gold-light);
+    font-size: 31px;
+    letter-spacing: 7px;
+}
+
+.brand small {
+    margin-top: 7px;
+
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 7px;
+    letter-spacing: 6px;
+    text-align: center;
+}
+
+
+/* NAV LINKS */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 31px;
+}
+
+.nav-links a {
+    position: relative;
+
+    color: #eee9df;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+
+    padding: 31px 0;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--gold-light);
+}
+
+.nav-links a.active::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+
+    height: 2px;
+
+    background: var(--gold);
+}
+
+
+/* NAV ACTIONS */
+
+.nav-actions {
+    display: flex;
+    gap: 19px;
+}
+
+.nav-actions a {
+    color: #eee9df;
+    font-size: 22px;
+
+    transition: 0.3s;
+}
+
+.nav-actions a:hover {
+    color: var(--gold);
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    min-height: 650px;
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+
+    padding: 90px 8%;
+
+    color: #fff;
+
+    background:
+        radial-gradient(
+            circle at 75% 50%,
+            rgba(201, 164, 92, 0.13),
+            transparent 25%
+        ),
+        linear-gradient(
+            115deg,
+            #021b16 0%,
+            #052a21 47%,
+            #07130f 100%
+        );
+}
+
+
+/* subtle luxury texture */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    opacity: 0.12;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            transparent 49%,
+            rgba(255,255,255,0.04) 50%,
+            transparent 51%
+        );
+
+    background-size: 70px 70px;
+}
+
+
+/* HERO CONTENT */
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+
+    max-width: 600px;
+}
+
+.eyebrow {
+    display: inline-block;
+
+    color: var(--gold-light);
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    margin: 22px 0;
+
+    font-size: clamp(55px, 7vw, 94px);
+    font-weight: 400;
+    line-height: 0.96;
+    letter-spacing: -3px;
+}
+
+.hero h1 em {
+    display: block;
+
+    color: var(--gold-light);
+
+    font-weight: 400;
+    font-style: italic;
+}
+
+.hero p {
+    max-width: 510px;
+
+    color: #ddd8ce;
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* BUTTONS */
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+
+    margin-top: 32px;
+}
+
+.gold-btn,
+.outline-btn,
+.dark-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    min-height: 48px;
+    padding: 0 25px;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+.gold-btn {
+    background: var(--gold);
+    color: #17130c;
+}
+
+.gold-btn:hover {
+    background: var(--gold-light);
+    transform: translateY(-3px);
+}
+
+.outline-btn {
+    border: 1px solid rgba(255,255,255,0.6);
+    color: #fff;
+}
+
+.outline-btn:hover {
+    background: #fff;
+    color: var(--emerald);
+}
+
+.hero-meta {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    margin-top: 45px;
+
+    color: var(--gold-light);
+
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 4px;
+}
+
+.hero-meta i {
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+    background: var(--gold);
+}
+
+
+/* HERO JEWELLERY ART */
+
+.hero-jewellery {
+    position: absolute;
+
+    right: 5%;
+    top: 50%;
+
+    width: 520px;
+    height: 440px;
+
+    transform: translateY(-50%);
+}
+
+.jewel-glow {
+    position: absolute;
+
+    width: 430px;
+    height: 280px;
+
+    top: 80px;
+    left: 45px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(201,164,92,0.28),
+            rgba(201,164,92,0.03) 55%,
+            transparent 72%
+        );
+
+    filter: blur(12px);
+}
+
+
+/* ring 1 */
+
+.hero-ring {
+    position: absolute;
+
+    border: 15px solid var(--gold);
+
+    border-radius: 50%;
+
+    box-shadow:
+        inset 0 0 20px rgba(255,255,255,0.35),
+        0 0 20px rgba(201,164,92,0.18);
+}
+
+.ring-one {
+    width: 240px;
+    height: 240px;
+
+    right: 75px;
+    top: 80px;
+
+    transform: rotate(-20deg);
+
+    border-right-color: #7b5c28;
+}
+
+.ring-two {
+    width: 185px;
+    height: 185px;
+
+    right: 220px;
+    top: 130px;
+
+    transform: rotate(22deg);
+
+    border-left-color: #7b5c28;
+}
+
+.hero-gem {
+    position: absolute;
+
+    right: 170px;
+    top: 125px;
+
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #fff;
+    font-size: 38px;
+
+    border: 2px solid var(--gold-light);
+    transform: rotate(45deg);
+
+    box-shadow:
+        0 0 30px rgba(255,255,255,0.35);
+}
+
+.hero-gem::first-letter {
+    transform: rotate(-45deg);
+}
+
+.hero-caption {
+    position: absolute;
+
+    right: 0;
+    bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    text-align: right;
+
+    color: var(--gold-light);
+
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+    line-height: 2;
+}
+
+.hero-side-text {
+    position: absolute;
+
+    right: 7%;
+    bottom: 35px;
+
+    color: var(--gold-light);
+
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    line-height: 2;
+    letter-spacing: 2px;
+    text-align: right;
+}
+
+
+/* =====================================================
+   TRUST BAR
+===================================================== */
+
+.trust-bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    background: var(--ivory);
+
+    border-bottom: 1px solid #d8cdbb;
+}
+
+.trust-bar > div {
+    min-height: 85px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    border-right: 1px solid #d8cdbb;
+}
+
+.trust-bar > div:last-child {
+    border-right: none;
+}
+
+.trust-icon {
+    color: #8b6428;
+    font-size: 27px;
+}
+
+.trust-bar strong,
+.trust-bar small {
+    display: block;
+}
+
+.trust-bar strong {
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.trust-bar small {
+    margin-top: 5px;
+
+    color: #817b71;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+}
+
+
+/* =====================================================
+   ABOUT
+===================================================== */
+
+.about-section {
+    min-height: 500px;
+
+    display: grid;
+    grid-template-columns: 80px 1fr 1fr;
+
+    background: var(--ivory);
+}
+
+.about-number {
+    padding-top: 70px;
+
+    color: #9b7538;
+
+    border-right: 1px solid #d6c9b5;
+
+    font-family: Georgia, serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+.about-copy {
+    padding: 80px 7%;
+}
+
+.about-copy h2 {
+    margin: 20px 0;
+
+    max-width: 570px;
+
+    font-size: clamp(38px, 4vw, 62px);
+    font-weight: 400;
+    line-height: 1.05;
+}
+
+.about-copy h2 em {
+    display: block;
+
+    color: #9a7135;
+    font-style: italic;
+}
+
+.about-copy p {
+    max-width: 570px;
+
+    color: #68645c;
+
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.text-link {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    color: #795a2c;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    border-bottom: 1px solid #c9a45c;
+    padding-bottom: 7px;
+}
+
+
+/* ABOUT VISUAL */
+
+.about-visual {
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            #a98b65,
+            #4d3929 35%,
+            #17110d 80%
+        );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-visual > span {
+    position: absolute;
+
+    right: 30px;
+    bottom: 25px;
+
+    color: var(--gold-light);
+
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+
+/* abstract model */
+
+.model-silhouette {
+    position: relative;
+
+    width: 260px;
+    height: 380px;
+
+    filter: drop-shadow(0 25px 30px rgba(0,0,0,0.35));
+}
+
+.model-head {
+    position: absolute;
+
+    top: 20px;
+    left: 78px;
+
+    width: 105px;
+    height: 130px;
+
+    border-radius: 48% 48% 45% 45%;
+
+    background:
+        radial-gradient(
+            circle at 65% 35%,
+            #d6a879,
+            #855c43 75%
+        );
+}
+
+.model-body {
+    position: absolute;
+
+    left: 25px;
+    bottom: 0;
+
+    width: 215px;
+    height: 250px;
+
+    border-radius: 50% 50% 0 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #231712,
+            #6e4a35,
+            #1b120e
+        );
+}
+
+.model-necklace {
+    position: absolute;
+
+    top: 130px;
+    left: 78px;
+
+    z-index: 3;
+
+    color: var(--gold-light);
+
+    font-size: 21px;
+    letter-spacing: 8px;
+
+    text-shadow:
+        0 0 15px rgba(255,220,130,0.7);
+}
+
+
+/* =====================================================
+   COLLECTIONS
+===================================================== */
+
+.collections {
+    padding: 100px 6%;
+
+    background: #eee5d5;
+}
+
+.section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+
+    gap: 40px;
+
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    margin-top: 13px;
+
+    font-size: clamp(35px, 4vw, 55px);
+    font-weight: 400;
+}
+
+.section-heading > p {
+    max-width: 420px;
+
+    color: #756f64;
+
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* JEWELLERY GRID */
+
+.jewellery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 16px;
+}
+
+.jewellery-card {
+    overflow: hidden;
+
+    background: #f9f4e9;
+
+    border: 1px solid #d4c5ae;
+
+    transition: 0.4s;
+}
+
+.jewellery-card:hover {
+    transform: translateY(-8px);
+
+    border-color: var(--gold);
+
+    box-shadow:
+        0 20px 40px rgba(40,30,15,0.13);
+}
+
+
+/* ART BACKGROUNDS */
+
+.jewel-art {
+    position: relative;
+
+    height: 310px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 50%,
+            #3b2d1d,
+            #15140f 65%,
+            #080908
+        );
+}
+
+.jewel-art::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            120deg,
+            transparent,
+            rgba(255,255,255,0.07),
+            transparent
+        );
+
+    transform: translateX(-100%);
+    transition: 0.7s;
+}
+
+.jewellery-card:hover .jewel-art::after {
+    transform: translateX(100%);
+}
+
+
+/* RING ART */
+
+.art-ring {
+    position: absolute;
+
+    width: 175px;
+    height: 175px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%) rotate(-20deg);
+
+    border: 17px solid var(--gold);
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 35px rgba(201,164,92,0.22),
+        inset 0 0 15px rgba(255,255,255,0.3);
+}
+
+.art-ring span {
+    position: absolute;
+
+    top: -25px;
+    left: 54px;
+
+    color: #fff3c9;
+
+    font-size: 45px;
+
+    text-shadow:
+        0 0 20px white;
+}
+
+
+/* NECKLACE */
+
+.art-necklace {
+    position: absolute;
+
+    width: 260px;
+    height: 180px;
+
+    left: 50%;
+    top: 45%;
+
+    transform: translate(-50%, -50%);
+
+    border: 5px solid var(--gold-light);
+
+    border-top: 0;
+
+    border-radius: 0 0 50% 50%;
+
+    box-shadow:
+        0 10px 25px rgba(201,164,92,0.2);
+}
+
+.art-necklace::before {
+    content: "";
+
+    position: absolute;
+
+    width: 18px;
+    height: 18px;
+
+    bottom: -12px;
+    left: calc(50% - 9px);
+
+    background: var(--gold-light);
+
+    transform: rotate(45deg);
+}
+
+.art-necklace span {
+    position: absolute;
+
+    bottom: -30px;
+    left: calc(50% - 7px);
+
+    color: white;
+
+    font-size: 20px;
+}
+
+
+/* EARRINGS */
+
+.art-earring {
+    position: absolute;
+
+    width: 75px;
+    height: 105px;
+
+    top: 90px;
+
+    border: 9px solid var(--gold);
+
+    border-radius: 50%;
+
+    color: #fff0bd;
+
+    font-size: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow:
+        0 0 25px rgba(201,164,92,0.25);
+}
+
+.left-earring {
+    left: 75px;
+}
+
+.right-earring {
+    right: 75px;
+}
+
+
+/* BRACELET */
+
+.art-bracelet {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 270px;
+    height: 120px;
+
+    transform: translate(-50%, -50%) rotate(-13deg);
+
+    border: 17px solid var(--gold);
+
+    border-radius: 50%;
+
+    color: #fff1bd;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    letter-spacing: 25px;
+
+    box-shadow:
+        0 0 30px rgba(201,164,92,0.22);
+}
+
+
+/* CARD INFO */
+
+.card-info {
+    padding: 25px;
+}
+
+.card-info small {
+    color: #9b783e;
+
+    font-family: Arial, sans-serif;
+    font-size: 8px;
+    letter-spacing: 2px;
+}
+
+.card-info h3 {
+    margin: 8px 0;
+
+    font-size: 29px;
+    font-weight: 400;
+}
+
+.card-info p {
+    margin-bottom: 18px;
+
+    color: #777066;
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+}
+
+.card-info strong {
+    color: #765526;
+
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+
+/* =====================================================
+   CATEGORY STRIP
+===================================================== */
+
+.category-strip {
+    margin-top: 45px;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    border-top: 1px solid #cfc2ad;
+    border-left: 1px solid #cfc2ad;
+}
+
+.category-strip a {
+    padding: 17px 18px;
+
+    display: flex;
+    justify-content: space-between;
+
+    border-right: 1px solid #cfc2ad;
+    border-bottom: 1px solid #cfc2ad;
+
+    color: #403b33;
+
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.category-strip a:hover {
+    background: var(--emerald);
+    color: var(--gold-light);
+}
+
+
+/* =====================================================
+   MATERIAL
+===================================================== */
+
+.material-section {
+    min-height: 470px;
+
+    padding: 80px 8%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    background: var(--emerald);
+    color: white;
+}
+
+.material-content h2 {
+    margin: 20px 0;
+
+    font-size: clamp(45px, 5vw, 75px);
+    font-weight: 400;
+    line-height: 0.95;
+}
+
+.material-content h2 em {
+    color: var(--gold-light);
+    font-style: italic;
+}
+
+.material-content p {
+    max-width: 450px;
+
+    color: #c8c7bf;
+
+    font-family: Arial, sans-serif;
+    line-height: 1.8;
+}
+
+.material-content .text-link {
+    color: var(--gold-light);
+}
+
+.material-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    border-left: 1px solid var(--line);
+}
+
+.material-stats div {
+    min-height: 160px;
+
+    padding: 25px;
+
+    border-right: 1px solid var(--line);
+}
+
+.material-stats span,
+.material-stats strong,
+.material-stats small {
+    display: block;
+}
+
+.material-stats span {
+    color: var(--gold);
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+}
+
+.material-stats strong {
+    margin-top: 45px;
+
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.material-stats small {
+    margin-top: 8px;
+
+    color: #aaa;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+}
+
+
+/* =====================================================
+   NEW ARRIVALS
+===================================================== */
+
+.new-arrivals {
+    padding: 100px 7%;
+
+    background: var(--ivory);
+}
+
+.coming-soon {
+    color: #92703b;
+
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.coming-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.coming-card {
+    min-height: 300px;
+
+    padding: 35px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fffaf0,
+            #e8dcc8
+        );
+
+    border: 1px solid #d4c5ae;
+
+    position: relative;
+
+    transition: 0.35s;
+}
+
+.coming-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--gold);
+}
+
+.coming-card.featured-coming {
+    background: var(--emerald);
+    color: white;
+}
+
+.coming-icon {
+    color: var(--gold);
+
+    font-size: 35px;
+}
+
+.coming-card small {
+    display: block;
+
+    margin-top: 25px;
+
+    color: #96733a;
+
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.coming-card h3 {
+    margin: 15px 0;
+
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.coming-card p {
+    max-width: 300px;
+
+    color: #777064;
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.featured-coming p {
+    color: #c4c1b9;
+}
+
+.coming-card > span {
+    position: absolute;
+
+    bottom: 30px;
+
+    color: var(--gold);
+
+    font-family: Arial, sans-serif;
+    font-size: 8px;
+    letter-spacing: 2px;
+}
+
+
+/* =====================================================
+   BRIDAL
+===================================================== */
+
+.bridal-section {
+    min-height: 580px;
+
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+
+    background: #21160f;
+    color: white;
+}
+
+.bridal-visual {
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            #9d704b,
+            #40291c 40%,
+            #100b08 80%
+        );
+}
+
+.bridal-model {
+    position: relative;
+
+    width: 350px;
+    height: 480px;
+}
+
+.bridal-face {
+    position: absolute;
+
+    top: 35px;
+    left: 115px;
+
+    width: 125px;
+    height: 165px;
+
+    border-radius: 48%;
+
+    background:
+        radial-gradient(
+            circle at 60% 35%,
+            #d8a87f,
+            #754b36
+        );
+}
+
+.bridal-model::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 85px;
+
+    width: 190px;
+    height: 245px;
+
+    border-radius: 50% 50% 35% 35%;
+
+    background: #17100d;
+}
+
+.bridal-model::after {
+    content: "";
+
+    position: absolute;
+
+    left: 40px;
+    bottom: 0;
+
+    width: 270px;
+    height: 270px;
+
+    border-radius: 50% 50% 0 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #25130e,
+            #8e6043,
+            #28130d
+        );
+}
+
+.bridal-necklace {
+    position: absolute;
+
+    z-index: 5;
+
+    top: 170px;
+    left: 82px;
+
+    color: var(--gold-light);
+
+    font-size: 23px;
+    letter-spacing: 7px;
+
+    text-shadow:
+        0 0 18px rgba(255,220,130,0.7);
+}
+
+.bridal-earring {
+    position: absolute;
+
+    z-index: 6;
+
+    top: 155px;
+
+    width: 24px;
+    height: 60px;
+
+    border: 5px solid var(--gold);
+
+    border-radius: 50%;
+}
+
+.bridal-earring.left {
+    left: 105px;
+}
+
+.bridal-earring.right {
+    right: 105px;
+}
+
+.bridal-caption {
+    position: absolute;
+
+    left: 35px;
+    bottom: 25px;
+
+    color: var(--gold-light);
+
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+.bridal-content {
+    padding: 100px 12%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bridal-content h2 {
+    margin: 20px 0;
+
+    font-size: clamp(45px, 5vw, 72px);
+    font-weight: 400;
+    line-height: 1;
+}
+
+.bridal-content h2 em {
+    display: block;
+
+    color: var(--gold-light);
+    font-style: italic;
+}
+
+.bridal-content p {
+    max-width: 480px;
+
+    color: #c9c2b7;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+}
+
+.bridal-content .gold-btn {
+    width: fit-content;
+}
+
+
+/* =====================================================
+   OCCASION
+===================================================== */
+
+.occasion-section {
+    padding: 100px 7%;
+
+    background: #eee5d5;
+}
+
+.centered {
+    display: block;
+    text-align: center;
+}
+
+.centered > p {
+    margin: 15px auto 0;
+}
+
+.occasion-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 1px;
+
+    background: #cfc2ad;
+
+    border: 1px solid #cfc2ad;
+}
+
+.occasion-grid a {
+    min-height: 240px;
+
+    padding: 35px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    background: var(--ivory);
+
+    transition: 0.4s;
+}
+
+.occasion-grid a:hover {
+    background: var(--emerald);
+    color: white;
+}
+
+.occasion-grid small {
+    color: #9a7336;
+
+    font-family: Arial, sans-serif;
+    font-size: 8px;
+    letter-spacing: 2px;
+}
+
+.occasion-grid h3 {
+    margin: 10px 0 25px;
+
+    font-size: 27px;
+    font-weight: 400;
+}
+
+.occasion-grid strong {
+    color: var(--gold);
+
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+
+/* =====================================================
+   CRAFTSMANSHIP
+===================================================== */
+
+.craftsmanship {
+    min-height: 600px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    background: var(--emerald-dark);
+    color: white;
+}
+
+.craft-content {
+    padding: 90px 10%;
+}
+
+.craft-content h2 {
+    margin: 20px 0;
+
+    font-size: clamp(45px, 5vw, 68px);
+    font-weight: 400;
+    line-height: 1;
+}
+
+.craft-content h2 em {
+    color: var(--gold-light);
+    font-style: italic;
+}
+
+.craft-content > p {
+    max-width: 510px;
+
+    color: #bbbcb6;
+
+    font-family: Arial, sans-serif;
+    line-height: 1.8;
+}
+
+.craft-points {
+    margin-top: 45px;
+}
+
+.craft-points > div {
+    padding: 18px 0;
+
+    display: grid;
+    grid-template-columns: 45px 1fr;
+
+    border-top: 1px solid var(--line);
+}
+
+.craft-points span {
+    color: var(--gold);
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+}
+
+.craft-points strong {
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+.craft-points p {
+    grid-column: 2;
+
+    margin-top: 7px;
+
+    color: #8e938c;
+
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+}
+
+.craft-visual {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle,
+            #6f512f,
+            #1c1710 55%,
+            #080b09
+        );
+}
+
+.craft-jewellery {
+    width: 230px;
+    height: 230px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--gold-light);
+
+    font-size: 100px;
+
+    border: 1px solid var(--gold);
+
+    transform: rotate(45deg);
+
+    box-shadow:
+        0 0 60px rgba(201,164,92,0.25);
+}
+
+.craft-jewellery::first-letter {
+    transform: rotate(-45deg);
+}
+
+.craft-visual > span {
+    position: absolute;
+
+    bottom: 35px;
+
+    color: var(--gold-light);
+
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+
+/* =====================================================
+   WHY SAJO
+===================================================== */
+
+.why-sajo {
+    padding: 100px 7%;
+
+    background: var(--ivory);
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    margin-top: 50px;
+
+    border-top: 1px solid #d1c5b2;
+}
+
+.why-grid > div {
+    padding: 30px;
+
+    border-right: 1px solid #d1c5b2;
+}
+
+.why-grid > div:last-child {
+    border-right: none;
+}
+
+.why-grid span {
+    color: #9b7538;
+
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+}
+
+.why-grid h3 {
+    margin: 35px 0 13px;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.why-grid p {
+    color: #777169;
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   SOCIAL
+===================================================== */
+
+.social-section {
+    padding: 100px 7%;
+
+    background: #eee5d5;
+
+    text-align: center;
+}
+
+.social-placeholder {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 12px;
+
+    max-width: 1100px;
+    margin: 45px auto 30px;
+}
+
+.social-placeholder div {
+    min-height: 230px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle,
+            #57462e,
+            #161712 70%
+        );
+
+    color: var(--gold-light);
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+
+    border: 1px solid rgba(201,164,92,0.3);
+
+    transition: 0.35s;
+}
+
+.social-placeholder div:hover {
+    transform: translateY(-7px);
+    border-color: var(--gold);
+}
+
+.instagram-btn {
+    color: #5d451f;
+    border-color: #a98951;
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact-section {
+    padding: 100px 8%;
+
+    background:
+        linear-gradient(
+            120deg,
+            var(--gold),
+            #e6cc96
+        );
+
+    color: #16130e;
+}
+
+.contact-section > div {
+    max-width: 900px;
+}
+
+.contact-section h2 {
+    margin: 20px 0;
+
+    font-size: clamp(45px, 6vw, 78px);
+    font-weight: 400;
+    line-height: 0.95;
+}
+
+.contact-section h2 em {
+    color: #60481f;
+    font-style: italic;
+}
+
+.contact-section p {
+    max-width: 650px;
+
+    margin-bottom: 30px;
+
+    color: #574a35;
+
+    font-family: Arial, sans-serif;
+    line-height: 1.8;
+}
+
+.dark-btn {
+    background: #111;
+    color: white;
+}
+
+.dark-btn:hover {
+    background: var(--emerald);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.site-footer {
+    background: #071b16;
+    color: white;
+}
+
+.footer-top {
+    padding: 70px 7%;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+
+    gap: 60px;
+}
+
+.footer-brand p {
+    max-width: 300px;
+
+    margin-top: 25px;
+
+    color: #9fa49e;
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.footer-column h4 {
+    margin-bottom: 12px;
+
+    color: var(--gold-light);
+
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.footer-column a {
+    color: #aaaFA9;
+
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+
+    transition: 0.3s;
+}
+
+.footer-column a:hover {
+    color: var(--gold-light);
+    transform: translateX(4px);
+}
+
+.footer-bottom {
+    min-height: 65px;
+
+    padding: 0 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-top: 1px solid rgba(201,164,92,0.2);
+
+    color: #8e958f;
+
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.footer-bottom a {
+    color: var(--gold-light);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+    }
+
+    .hero-jewellery {
+        opacity: 0.35;
+        right: -80px;
+    }
+
+    .jewellery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .category-strip {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .occasion-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .why-grid > div:nth-child(2) {
+        border-right: none;
+    }
+
+    .footer-top {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .announcement {
+        padding: 0 10px;
+        height: 34px;
+
+        font-size: 7px;
+        letter-spacing: 1.4px;
+    }
+
+    .navbar {
+        min-height: 70px;
+        padding: 0 5%;
+    }
+
+    .brand span {
+        font-size: 23px;
+    }
+
+    .brand small {
+        font-size: 5px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-actions {
+        gap: 12px;
+    }
+
+    .nav-actions a {
+        font-size: 18px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 680px;
+
+        padding: 80px 7%;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+        letter-spacing: -2px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-jewellery {
+        right: -180px;
+        top: 55%;
+        opacity: 0.35;
+        transform: translateY(-50%) scale(0.75);
+    }
+
+    .hero-side-text {
+        display: none;
+    }
+
+
+    /* TRUST */
+
+    .trust-bar {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .trust-bar > div {
+        min-height: 90px;
+        padding: 12px;
+    }
+
+    .trust-bar > div:nth-child(2) {
+        border-right: none;
+    }
+
+    .trust-bar strong {
+        font-size: 8px;
+    }
+
+    .trust-bar small {
+        font-size: 8px;
+    }
+
+
+    /* ABOUT */
+
+    .about-section {
+        display: block;
+    }
+
+    .about-number {
+        display: none;
+    }
+
+    .about-copy {
+        padding: 70px 7%;
+    }
+
+    .about-copy h2 {
+        font-size: 40px;
+    }
+
+    .about-visual {
+        min-height: 420px;
+    }
+
+
+    /* COLLECTION */
+
+    .collections,
+    .new-arrivals,
+    .occasion-section,
+    .social-section,
+    .why-sajo {
+        padding: 75px 5%;
+    }
+
+    .section-heading {
+        display: block;
+    }
+
+    .section-heading > p {
+        margin-top: 20px;
+    }
+
+    .jewellery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .jewel-art {
+        height: 300px;
+    }
+
+    .category-strip {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    /* MATERIAL */
+
+    .material-section {
+        display: block;
+        padding: 75px 7%;
+    }
+
+    .material-stats {
+        margin-top: 50px;
+    }
+
+    .material-stats div {
+        padding: 15px;
+    }
+
+    .material-stats strong {
+        margin-top: 30px;
+    }
+
+
+    /* ARRIVALS */
+
+    .coming-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* BRIDAL */
+
+    .bridal-section {
+        grid-template-columns: 1fr;
+    }
+
+    .bridal-visual {
+        min-height: 520px;
+    }
+
+    .bridal-content {
+        padding: 75px 8%;
+    }
+
+
+    /* OCCASIONS */
+
+    .occasion-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* CRAFT */
+
+    .craftsmanship {
+        grid-template-columns: 1fr;
+    }
+
+    .craft-content {
+        padding: 75px 7%;
+    }
+
+    .craft-visual {
+        min-height: 400px;
+    }
+
+
+    /* WHY */
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .why-grid > div {
+        border-right: none;
+        border-bottom: 1px solid #d1c5b2;
+    }
+
+
+    /* SOCIAL */
+
+    .social-placeholder {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .social-placeholder div {
+        min-height: 170px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-top {
+        grid-template-columns: 1fr 1fr;
+        gap: 45px 25px;
+        padding: 60px 7%;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-bottom {
+        min-height: auto;
+
+        padding: 25px 7%;
+
+        flex-direction: column;
+        gap: 15px;
+
+        text-align: center;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 430px) {
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero-meta {
+        gap: 10px;
+        font-size: 7px;
+    }
+
+    .trust-bar {
+        grid-template-columns: 1fr;
+    }
+
+    .trust-bar > div {
+        border-right: none;
+        border-bottom: 1px solid #d8cdbb;
+    }
+
+    .category-strip {
+        grid-template-columns: 1fr;
+    }
+
+    .material-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .material-stats div {
+        min-height: 120px;
+        border-bottom: 1px solid var(--line);
+    }
+
+    .social-placeholder {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+
+}

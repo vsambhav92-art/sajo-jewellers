@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sajo Jewellers | Necklace</title>
+
+    <meta name="description"
+        content="Discover premium necklaces by Sajo Jewellers. Elegant gold and silver jewellery crafted for timeless moments.">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            background: #071d18;
+            color: #f5f0e6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* ================= TOP BAR ================= */
+
+        .topbar {
+            background: #c8a45d;
+            color: #071d18;
+
+            text-align: center;
+
+            padding: 9px 15px;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 10px;
+
+            letter-spacing: 2px;
+
+            font-weight: bold;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        nav {
+            min-height: 82px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            padding: 0 7%;
+
+            background: #071d18;
+
+            border-bottom: 1px solid rgba(200,164,93,0.3);
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+        }
+
+        .logo {
+            color: #f5f0e6;
+
+            font-size: 24px;
+
+            letter-spacing: 3px;
+
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #c8a45d;
+        }
+
+        .back-link {
+            color: #ddd5c7;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 12px;
+
+            letter-spacing: 1px;
+
+            transition: 0.3s;
+        }
+
+        .back-link:hover {
+            color: #c8a45d;
+        }
+
+        /* ================= PRODUCT ================= */
+
+        .product-section {
+            max-width: 1250px;
+
+            margin: auto;
+
+            padding: 90px 7% 110px;
+
+            display: grid;
+
+            grid-template-columns: 1.05fr 0.95fr;
+
+            gap: 80px;
+
+            align-items: center;
+        }
+
+        /* ================= IMAGE ================= */
+
+        .image-area {
+            position: relative;
+        }
+
+        .product-image {
+            background: #0b2922;
+
+            border: 1px solid rgba(200,164,93,0.45);
+
+            padding: 15px;
+
+            position: relative;
+        }
+
+        .product-image::before {
+            content: "";
+
+            position: absolute;
+
+            inset: 8px;
+
+            border: 1px solid rgba(200,164,93,0.18);
+
+            pointer-events: none;
+        }
+
+        .product-image img {
+            width: 100%;
+
+            min-height: 520px;
+
+            object-fit: cover;
+
+            display: block;
+        }
+
+        .image-label {
+            position: absolute;
+
+            left: 30px;
+
+            bottom: 30px;
+
+            background: rgba(7,29,24,0.9);
+
+            border: 1px solid rgba(200,164,93,0.4);
+
+            padding: 10px 15px;
+
+            color: #c8a45d;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 9px;
+
+            letter-spacing: 2px;
+        }
+
+        /* ================= INFO ================= */
+
+        .product-info small {
+            color: #c8a45d;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 10px;
+
+            letter-spacing: 4px;
+
+            font-weight: bold;
+        }
+
+        .product-info h1 {
+            font-size: clamp(42px, 5vw, 62px);
+
+            line-height: 1.05;
+
+            font-weight: normal;
+
+            margin: 20px 0 25px;
+        }
+
+        .description {
+            color: #cfc8bb;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 14px;
+
+            line-height: 1.9;
+
+            max-width: 550px;
+
+            margin-bottom: 28px;
+        }
+
+        .price {
+            color: #c8a45d;
+
+            font-size: 20px;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 30px;
+        }
+
+        /* ================= DETAILS ================= */
+
+        .details {
+            border-top: 1px solid rgba(200,164,93,0.3);
+
+            border-bottom: 1px solid rgba(200,164,93,0.3);
+
+            padding: 10px 0;
+
+            margin-bottom: 30px;
+        }
+
+        .detail-row {
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            padding: 14px 0;
+
+            border-bottom: 1px solid rgba(200,164,93,0.12);
+
+            font-family: Arial, sans-serif;
+
+            font-size: 12px;
+        }
+
+        .detail-row:last-child {
+            border-bottom: none;
+        }
+
+        .detail-label {
+            color: #9f998e;
+
+            letter-spacing: 1px;
+        }
+
+        .detail-value {
+            color: #f1e9da;
+
+            text-align: right;
+        }
+
+        /* ================= BUTTONS ================= */
+
+        .buttons {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+        }
+
+        .btn {
+            display: inline-block;
+
+            padding: 15px 25px;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 10px;
+
+            font-weight: bold;
+
+            letter-spacing: 1.5px;
+
+            transition: 0.3s;
+
+            border: 1px solid #c8a45d;
+        }
+
+        .whatsapp-btn {
+            background: #c8a45d;
+
+            color: #071d18;
+        }
+
+        .whatsapp-btn:hover {
+            background: #f0d78a;
+        }
+
+        .back-btn {
+            background: transparent;
+
+            color: #f5f0e6;
+        }
+
+        .back-btn:hover {
+            background: #c8a45d;
+
+            color: #071d18;
+        }
+
+        /* ================= TRUST ================= */
+
+        .trust-strip {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            background: #0a241e;
+
+            border-top: 1px solid rgba(200,164,93,0.2);
+
+            border-bottom: 1px solid rgba(200,164,93,0.2);
+        }
+
+        .trust-item {
+            text-align: center;
+
+            padding: 30px 20px;
+
+            border-right: 1px solid rgba(200,164,93,0.18);
+        }
+
+        .trust-item:last-child {
+            border-right: none;
+        }
+
+        .trust-item strong {
+            display: block;
+
+            color: #c8a45d;
+
+            font-size: 18px;
+
+            margin-bottom: 7px;
+        }
+
+        .trust-item span {
+            color: #aaa398;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 9px;
+
+            letter-spacing: 2px;
+        }
+
+        /* ================= STORY ================= */
+
+        .story {
+            padding: 90px 7%;
+
+            background: #f5f0e6;
+
+            color: #10211d;
+
+            text-align: center;
+        }
+
+        .story small {
+            color: #a27c32;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 10px;
+
+            letter-spacing: 4px;
+
+            font-weight: bold;
+        }
+
+        .story h2 {
+            font-size: clamp(35px, 5vw, 50px);
+
+            font-weight: normal;
+
+            margin: 17px 0;
+        }
+
+        .story h2 span {
+            color: #a27c32;
+
+            font-style: italic;
+        }
+
+        .story p {
+            max-width: 680px;
+
+            margin: auto;
+
+            color: #706b63;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 14px;
+
+            line-height: 1.8;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            padding: 45px 20px;
+
+            text-align: center;
+
+            background: #061712;
+
+            border-top: 1px solid rgba(200,164,93,0.2);
+
+            color: #8f8a80;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 12px;
+        }
+
+        footer .footer-logo {
+            color: #f5f0e6;
+
+            font-family: Georgia, serif;
+
+            font-size: 20px;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 10px;
+        }
+
+        footer .footer-logo span {
+            color: #c8a45d;
+        }
+
+        footer .location {
+            color: #c8a45d;
+
+            font-size: 9px;
+
+            letter-spacing: 2px;
+
+            margin-top: 14px;
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 800px) {
+
+            nav {
+                padding: 0 5%;
+            }
+
+            .product-section {
+                grid-template-columns: 1fr;
+
+                gap: 45px;
+
+                padding: 60px 5% 75px;
+            }
+
+            .product-image img {
+                min-height: 400px;
+            }
+
+            .product-info h1 {
+                font-size: 43px;
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            .topbar {
+                font-size: 8px;
+
+                letter-spacing: 1px;
+            }
+
+            nav {
+                min-height: 70px;
+            }
+
+            .logo {
+                font-size: 18px;
+            }
+
+            .back-link {
+                font-size: 10px;
+            }
+
+            .product-image {
+                padding: 10px;
+            }
+
+            .product-image img {
+                min-height: 350px;
+            }
+
+            .image-label {
+                left: 20px;
+
+                bottom: 20px;
+            }
+
+            .product-info h1 {
+                font-size: 38px;
+            }
+
+            .detail-row {
+                font-size: 11px;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                text-align: center;
+
+                width: 100%;
+            }
+
+            .trust-strip {
+                grid-template-columns: 1fr;
+            }
+
+            .trust-item {
+                border-right: none;
+
+                border-bottom: 1px solid rgba(200,164,93,0.18);
+            }
+
+            .trust-item:last-child {
+                border-bottom: none;
+            }
+
+            .story {
+                padding: 70px 5%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= TOP BAR ================= -->
+
+    <div class="topbar">
+        AUTHENTIC GOLD & SILVER • ROORKEE • INDIA
+    </div>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav>
+
+        <a href="../index.html" class="logo">
+            SAJO <span>JEWELLERS</span>
+        </a>
+
+        <a href="necklace.html" class="back-link">
+            ← BACK TO NECKLACES
+        </a>
+
+    </nav>
+
+
+    <!-- ================= PRODUCT ================= -->
+
+    <section class="product-section">
+
+
+        <!-- IMAGE -->
+
+        <div class="image-area">
+
+            <div class="product-image">
+
+                <img
+                    src="../images/necklace.jpg"
+                    alt="Sajo Jewellers Necklace"
+                    id="productImage"
+                >
+
+            </div>
+
+            <div class="image-label">
+                SAJO JEWELLERS • FINE JEWELLERY
+            </div>
+
+        </div>
+
+
+        <!-- INFORMATION -->
+
+        <div class="product-info">
+
+            <small>
+                SAJO JEWELLERS • NECKLACES
+            </small>
+
+            <h1 id="productName">
+                Signature Gold Necklace
+            </h1>
+
+            <p
+                class="description"
+                id="productDescription"
+            >
+                Discover timeless elegance with our
+                Signature Gold Necklace, designed with
+                refined detailing and a sophisticated finish.
+            </p>
+
+            <div class="price">
+                PRICE ON REQUEST
+            </div>
+
+
+            <!-- DETAILS -->
+
+            <div class="details">
+
+                <div class="detail-row">
+
+                    <span class="detail-label">
+                        MATERIAL
+                    </span>
+
+                    <span
+                        class="detail-value"
+                        id="material"
+                    >
+                        Gold
+                    </span>
+
+                </div>
+
+
+                <div class="detail-row">
+
+                    <span class="detail-label">
+                        DESIGN
+                    </span>
+
+                    <span
+                        class="detail-value"
+                        id="design"
+                    >
+                        Signature & Elegant
+                    </span>
+
+                </div>
+
+
+                <div class="detail-row">
+
+                    <span class="detail-label">
+                        CRAFT
+                    </span>
+
+                    <span class="detail-value">
+                        Premium Craftsmanship
+                    </span>
+
+                </div>
+
+
+                <div class="detail-row">
+
+                    <span class="detail-label">
+                        AVAILABILITY
+                    </span>
+
+                    <span class="detail-value">
+                        Enquire with Sajo Jewellers
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- BUTTONS -->
+
+            <div class="buttons">
+
+                <a
+                    id="whatsappButton"
+                    href="#"
+                    class="btn whatsapp-btn"
+                    target="_blank"
+                >
+                    ENQUIRE ON WHATSAPP
+                </a>
+
+
+                <a
+                    href="necklace.html"
+                    class="btn back-btn"
+                >
+                    BACK TO NECKLACES
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= TRUST ================= -->
+
+    <section class="trust-strip">
+
+        <div class="trust-item">
+
+            <strong>
+                ✦
+            </strong>
+
+            <span>
+                PREMIUM SELECTION
+            </span>
+
+        </div>
+
+
+        <div class="trust-item">
+
+            <strong>
+                ✦
+            </strong>
+
+            <span>
+                GOLD & SILVER
+            </span>
+
+        </div>
+
+
+        <div class="trust-item">
+
+            <strong>
+                ✦
+            </strong>
+
+            <span>
+                PERSONAL ENQUIRY
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= STORY ================= -->
+
+    <section class="story">
+
+        <small>
+            THE SAJO PHILOSOPHY
+        </small>
+
+        <h2>
+            Jewellery made for
+            <span>your moments.</span>
+        </h2>
+
+        <p>
+            Every Sajo Jewellers piece is selected with an eye
+            for elegance, craftsmanship and timeless appeal.
+            For pricing, availability, custom requirements or
+            more product details, connect directly with us.
+        </p>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+            SAJO <span>JEWELLERS</span>
+        </div>
+
+        <p>
+            © 2026 Sajo Jewellers. All Rights Reserved.
+        </p>
+
+        <div class="location">
+            ROORKEE • INDIA
+        </div>
+
+    </footer>
+
+
+    <!-- ================= PRODUCT DATA ================= -->
+
+    <script>
+
+        const products = {
+
+            signature: {
+
+                name: "Signature Gold Necklace",
+
+                description:
+                    "Discover timeless elegance with our Signature Gold Necklace. Refined detailing and a sophisticated finish make this design a beautiful choice for memorable occasions.",
+
+                material: "Gold",
+
+                design: "Signature & Elegant"
+            },
+
+
+            elegance: {
+
+                name: "Elegant Gold Necklace",
+
+                description:
+                    "A graceful necklace designed with a refined silhouette and elegant detailing, created to complement both celebrations and sophisticated everyday styling.",
+
+                material: "Gold",
+
+                design: "Elegant & Refined"
+            },
+
+
+            statement: {
+
+                name: "Statement Necklace",
+
+                description:
+                    "A distinctive statement necklace created for those who appreciate bold jewellery, premium craftsmanship and a memorable presence.",
+
+                material: "Gold / Silver",
+
+                design: "Statement & Contemporary"
+            },
+
+
+            bridal: {
+
+                name: "Bridal Necklace",
+
+                description:
+                    "A grand bridal-inspired necklace designed for celebrations, traditional occasions and unforgettable moments, with an elegant premium aesthetic.",
+
+                material: "Gold",
+
+                design: "Bridal & Traditional"
+            }
+
+        };
+
+
+        /* ================= GET PRODUCT ================= */
+
+        const urlParams =
+            new URLSearchParams(window.location.search);
+
+        const productType =
+            urlParams.get("product") || "signature";
+
+        const product =
+            products[productType] || products.signature;
+
+
+        /* ================= UPDATE PAGE ================= */
+
+        document.getElementById("productName").textContent =
+            product.name;
+
+
+        document.getElementById("productDescription").textContent =
+            product.description;
+
+
+        document.getElementById("material").textContent =
+            product.material;
+
+
+        document.getElementById("design").textContent =
+            product.design;
+
+
+        /* ================= WHATSAPP ================= */
+
+        const message =
+            "Hello Sajo Jewellers, I am interested in the " +
+            product.name +
+            ". Please share price, availability and details.";
+
+        document.getElementById("whatsappButton").href =
+            "https://wa.me/916398341558?text=" +
+            encodeURIComponent(message);
+
+
+        /* ================= PAGE TITLE ================= */
+
+        document.title =
+            "Sajo Jewellers | " + product.name;
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,2486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Explore the Sajo Jewellers Pendant Collection — women's, men's, gold and silver pendants.">
+
+<title>Sajo Jewellers | The Pendant Edit</title>
+
+<!-- GOOGLE FONTS -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+<style>
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f8f4ec;
+    color:#17130f;
+    font-family:'Inter',sans-serif;
+    overflow-x:hidden;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+button{
+    font-family:inherit;
+}
+
+
+/* =========================================================
+   ANNOUNCEMENT
+========================================================= */
+
+.announcement{
+    height:36px;
+    background:#17130f;
+    color:#f8f4ec;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:10px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar{
+    position:absolute;
+    top:36px;
+    left:0;
+    width:100%;
+    z-index:20;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:25px 5%;
+    color:#fff;
+}
+
+.logo{
+    font-family:'Cormorant Garamond',serif;
+    font-size:30px;
+    letter-spacing:4px;
+    font-weight:600;
+}
+
+.nav-links{
+    display:flex;
+    gap:26px;
+    align-items:center;
+    list-style:none;
+}
+
+.nav-links a{
+    font-size:10px;
+    letter-spacing:1.8px;
+    text-transform:uppercase;
+    position:relative;
+    transition:.3s ease;
+}
+
+.nav-links a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-7px;
+    width:0;
+    height:1px;
+    background:#e0c58b;
+    transition:.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after{
+    width:100%;
+}
+
+.nav-links a:hover{
+    color:#e0c58b;
+}
+
+
+/* =========================================================
+   CINEMATIC HERO
+========================================================= */
+
+.hero{
+    height:92vh;
+    min-height:650px;
+    position:relative;
+    overflow:hidden;
+    background:#17130f;
+}
+
+.hero-video{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:.72;
+}
+
+.hero-overlay{
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,.55),
+            rgba(0,0,0,.15) 45%,
+            rgba(0,0,0,.65)
+        );
+}
+
+.hero-content{
+    position:absolute;
+    left:8%;
+    bottom:13%;
+    color:#fff;
+    max-width:800px;
+    z-index:3;
+}
+
+.hero-eyebrow{
+    font-size:10px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    margin-bottom:20px;
+    color:#e0c58b;
+}
+
+.hero h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(65px,9vw,145px);
+    line-height:.78;
+    font-weight:500;
+    letter-spacing:-4px;
+}
+
+.hero h1 span{
+    display:block;
+}
+
+.hero-scroll{
+    position:absolute;
+    right:5%;
+    bottom:7%;
+    color:#fff;
+    font-size:9px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    writing-mode:vertical-rl;
+    z-index:3;
+}
+
+
+/* =========================================================
+   CATEGORY INTRO
+========================================================= */
+
+.category-intro{
+    padding:130px 8% 80px;
+    text-align:center;
+}
+
+.section-eyebrow{
+    font-size:10px;
+    letter-spacing:4px;
+    color:#a38650;
+    text-transform:uppercase;
+    margin-bottom:20px;
+}
+
+.category-intro h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(45px,6vw,80px);
+    font-weight:500;
+    line-height:.95;
+    margin-bottom:25px;
+}
+
+.category-intro p{
+    max-width:650px;
+    margin:auto;
+    font-size:13px;
+    line-height:1.9;
+    color:#6e675e;
+}
+
+
+/* =========================================================
+   CATEGORY CARDS
+========================================================= */
+
+.category-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+    padding:0 5% 130px;
+}
+
+.category-card{
+    height:560px;
+    position:relative;
+    overflow:hidden;
+    background:#ddd;
+}
+
+.category-card img{
+    height:100%;
+    object-fit:cover;
+    transition:transform 1.2s cubic-bezier(.2,.7,.2,1);
+}
+
+.category-card:hover img{
+    transform:scale(1.07);
+}
+
+.category-overlay{
+    position:absolute;
+    inset:0;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    padding:35px;
+    color:#fff;
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,.75),
+        transparent 60%
+    );
+}
+
+.category-number{
+    font-size:9px;
+    letter-spacing:3px;
+    margin-bottom:10px;
+    opacity:.75;
+}
+
+.category-overlay h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:38px;
+    font-weight:500;
+}
+
+.category-overlay span{
+    font-size:9px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-top:10px;
+    color:#e0c58b;
+}
+
+
+/* =========================================================
+   EDITORIAL MODEL SECTION
+========================================================= */
+
+.editorial{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    min-height:720px;
+    background:#17130f;
+    color:#fff;
+}
+
+.editorial-image{
+    overflow:hidden;
+}
+
+.editorial-image img{
+    height:100%;
+    object-fit:cover;
+    transition:transform 1.4s ease;
+}
+
+.editorial:hover .editorial-image img{
+    transform:scale(1.04);
+}
+
+.editorial-content{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:10%;
+}
+
+.editorial-content .section-eyebrow{
+    color:#c4a15e;
+}
+
+.editorial-content h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(55px,6vw,95px);
+    line-height:.85;
+    font-weight:500;
+    margin-bottom:35px;
+}
+
+.editorial-content p{
+    max-width:420px;
+    color:#bdb5a9;
+    font-size:13px;
+    line-height:1.9;
+}
+
+
+/* =========================================================
+   PRODUCT SECTION
+========================================================= */
+
+.product-section{
+    padding:120px 5%;
+}
+
+.product-heading{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    margin-bottom:45px;
+}
+
+.product-heading h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:60px;
+    font-weight:500;
+}
+
+.product-heading p{
+    font-size:10px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:#8b806f;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.product-card{
+    position:relative;
+}
+
+.product-image{
+    position:relative;
+    overflow:hidden;
+    background:#eee8dd;
+    aspect-ratio:4/5;
+}
+
+.product-image img{
+    height:100%;
+    object-fit:cover;
+    transition:transform .8s ease;
+}
+
+.product-card:hover .product-image img{
+    transform:scale(1.06);
+}
+
+.wishlist{
+    position:absolute;
+    top:15px;
+    right:15px;
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,.5);
+    background:rgba(0,0,0,.25);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    font-size:17px;
+    backdrop-filter:blur(8px);
+    z-index:2;
+    transition:.3s ease;
+}
+
+.wishlist:hover{
+    background:#17130f;
+    transform:scale(1.08);
+}
+
+.product-info{
+    padding:18px 4px;
+}
+
+.product-info h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:24px;
+    font-weight:500;
+    margin-bottom:8px;
+}
+
+.product-price{
+    display:flex;
+    gap:10px;
+    align-items:center;
+    font-size:12px;
+}
+
+.current-price{
+    color:#17130f;
+}
+
+.old-price{
+    color:#a59d91;
+    text-decoration:line-through;
+}
+
+.view-all{
+    display:inline-block;
+    margin-top:15px;
+    font-size:9px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    border-bottom:1px solid #c4a15e;
+    padding-bottom:5px;
+    transition:.3s ease;
+}
+
+.view-all:hover{
+    color:#a38650;
+}
+
+
+/* =========================================================
+   DARK SECTION
+========================================================= */
+
+.dark-section{
+    background:#17130f;
+    color:#fff;
+}
+
+.dark-section .product-heading p{
+    color:#8e877d;
+}
+
+.dark-section .product-info h3{
+    color:#fff;
+}
+
+.dark-section .current-price{
+    color:#fff;
+}
+
+.dark-section .product-image{
+    background:#24201b;
+}
+
+
+/* =========================================================
+   3D JEWELLERY SHOWCASE
+========================================================= */
+
+.showcase{
+    background:#eee8dc;
+    min-height:720px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:100px 5%;
+    overflow:hidden;
+}
+
+.showcase .section-eyebrow{
+    color:#9c7c46;
+}
+
+.showcase h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(55px,7vw,100px);
+    font-weight:500;
+    line-height:.85;
+    margin-bottom:60px;
+}
+
+.pendant-stage{
+    width:360px;
+    height:360px;
+    position:relative;
+    perspective:1000px;
+}
+
+.pendant-orbit{
+    position:absolute;
+    inset:0;
+    border:1px solid rgba(164,130,71,.25);
+    border-radius:50%;
+    animation:pendantRotate 18s linear infinite;
+}
+
+.pendant-orbit::before,
+.pendant-orbit::after{
+    content:"";
+    position:absolute;
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:#c4a15e;
+}
+
+.pendant-orbit::before{
+    top:-4px;
+    left:50%;
+}
+
+.pendant-orbit::after{
+    bottom:-4px;
+    left:50%;
+}
+
+.pendant-jewel{
+    position:absolute;
+    left:50%;
+    top:50%;
+    width:180px;
+    transform:translate(-50%,-50%);
+    animation:pendantFloat 5s ease-in-out infinite;
+    filter:drop-shadow(0 25px 25px rgba(0,0,0,.22));
+}
+
+.pendant-jewel img{
+    width:100%;
+    object-fit:contain;
+}
+
+@keyframes pendantFloat{
+    0%,100%{
+        transform:translate(-50%,-50%) translateY(0) rotateY(0deg);
+    }
+
+    50%{
+        transform:translate(-50%,-50%) translateY(-18px) rotateY(8deg);
+    }
+}
+
+@keyframes pendantRotate{
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+
+/* =========================================================
+   ASSISTANCE
+========================================================= */
+
+.assistance{
+    padding:120px 8%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:center;
+}
+
+.assistance h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:70px;
+    line-height:.9;
+    font-weight:500;
+}
+
+.assistance-text p{
+    color:#6f685e;
+    font-size:13px;
+    line-height:1.9;
+    max-width:450px;
+    margin-bottom:30px;
+}
+
+.whatsapp-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    background:#17130f;
+    color:#fff;
+    padding:17px 28px;
+    font-size:9px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    transition:.3s ease;
+}
+
+.whatsapp-btn:hover{
+    background:#c4a15e;
+    color:#17130f;
+    transform:translateY(-3px);
+}
+
+
+/* =========================================================
+   TRUST
+========================================================= */
+
+.trust{
+    border-top:1px solid rgba(23,19,15,.12);
+    border-bottom:1px solid rgba(23,19,15,.12);
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+}
+
+.trust-item{
+    padding:45px 25px;
+    text-align:center;
+    border-right:1px solid rgba(23,19,15,.12);
+}
+
+.trust-item:last-child{
+    border-right:none;
+}
+
+.trust-icon{
+    font-size:22px;
+    margin-bottom:15px;
+}
+
+.trust-item h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:22px;
+    font-weight:500;
+    margin-bottom:7px;
+}
+
+.trust-item p{
+    font-size:9px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    color:#8c8376;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer{
+    background:#17130f;
+    color:#fff;
+    padding:90px 5% 35px;
+}
+
+.footer-top{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:50px;
+    padding-bottom:80px;
+}
+
+.footer-brand h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:45px;
+    font-weight:500;
+    letter-spacing:3px;
+    margin-bottom:20px;
+}
+
+.footer-brand p{
+    color:#9d968c;
+    font-size:11px;
+    line-height:1.8;
+    max-width:320px;
+}
+
+.footer-col h4{
+    font-size:9px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:#c4a15e;
+    margin-bottom:22px;
+}
+
+.footer-col a{
+    display:block;
+    font-size:11px;
+    color:#a8a096;
+    margin-bottom:13px;
+    transition:.3s ease;
+}
+
+.footer-col a:hover{
+    color:#fff;
+    transform:translateX(4px);
+}
+
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.12);
+    padding-top:25px;
+    display:flex;
+    justify-content:space-between;
+    color:#777169;
+    font-size:9px;
+    letter-spacing:1px;
+}
+
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+.reveal{
+    opacity:0;
+    transform:translateY(35px);
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+}
+
+.reveal.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:1000px){
+
+    .nav-links{
+        gap:12px;
+    }
+
+    .nav-links a{
+        font-size:8px;
+    }
+
+    .category-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .product-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .trust{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .trust-item:nth-child(2){
+        border-right:none;
+    }
+
+    .trust-item:nth-child(-n+2){
+        border-bottom:1px solid rgba(23,19,15,.12);
+    }
+
+    .footer-top{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+
+@media(max-width:700px){
+
+    .announcement{
+        font-size:8px;
+        letter-spacing:2px;
+    }
+
+    .navbar{
+        padding:18px 5%;
+        align-items:flex-start;
+    }
+
+    .logo{
+        font-size:23px;
+    }
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero{
+        height:82vh;
+        min-height:600px;
+    }
+
+    .hero-content{
+        left:7%;
+        bottom:14%;
+        right:5%;
+    }
+
+    .hero h1{
+        font-size:68px;
+        letter-spacing:-2px;
+    }
+
+    .hero-scroll{
+        display:none;
+    }
+
+    .category-intro{
+        padding:90px 7% 55px;
+    }
+
+    .category-grid{
+        grid-template-columns:1fr 1fr;
+        gap:7px;
+        padding:0 3% 90px;
+    }
+
+    .category-card{
+        height:390px;
+    }
+
+    .category-overlay{
+        padding:20px;
+    }
+
+    .category-overlay h3{
+        font-size:28px;
+    }
+
+    .editorial{
+        grid-template-columns:1fr;
+        min-height:auto;
+    }
+
+    .editorial-image{
+        height:520px;
+    }
+
+    .editorial-content{
+        padding:80px 8%;
+    }
+
+    .editorial-content h2{
+        font-size:65px;
+    }
+
+    .product-section{
+        padding:85px 4%;
+    }
+
+    .product-heading{
+        display:block;
+    }
+
+    .product-heading h2{
+        font-size:50px;
+        margin-bottom:12px;
+    }
+
+    .product-grid{
+        grid-template-columns:1fr 1fr;
+        gap:12px;
+    }
+
+    .product-info h3{
+        font-size:20px;
+    }
+
+    .showcase{
+        min-height:600px;
+        padding:80px 5%;
+    }
+
+    .showcase h2{
+        font-size:62px;
+    }
+
+    .pendant-stage{
+        width:280px;
+        height:280px;
+    }
+
+    .pendant-jewel{
+        width:140px;
+    }
+
+    .assistance{
+        grid-template-columns:1fr;
+        gap:35px;
+        padding:85px 8%;
+    }
+
+    .assistance h2{
+        font-size:60px;
+    }
+
+    .trust{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .trust-item{
+        padding:35px 12px;
+    }
+
+    .footer{
+        padding:70px 6% 30px;
+    }
+
+    .footer-top{
+        grid-template-columns:1fr 1fr;
+        gap:40px 25px;
+    }
+
+    .footer-brand{
+        grid-column:1/-1;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+        gap:10px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+========================================================= */
+
+@media(max-width:430px){
+
+    .category-card{
+        height:330px;
+    }
+
+    .category-overlay h3{
+        font-size:25px;
+    }
+
+    .product-grid{
+        gap:9px;
+    }
+
+    .product-info h3{
+        font-size:18px;
+    }
+
+    .product-price{
+        font-size:10px;
+    }
+
+    .pendant-stage{
+        width:250px;
+        height:250px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ======================================================
+     ANNOUNCEMENT
+====================================================== -->
+
+<div class="announcement">
+    Complimentary Shipping • Crafted With Care • Sajo Jewellers
+</div>
+
+
+<!-- ======================================================
+     NAVBAR
+====================================================== -->
+
+<nav class="navbar">
+
+    <a href="index.html" class="logo">
+        SAJO
+    </a>
+
+    <ul class="nav-links">
+
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+
+        <li>
+            <a href="rings.html">Rings</a>
+        </li>
+
+        <li>
+            <a href="necklace.html">Necklaces</a>
+        </li>
+
+        <li>
+            <a href="earrings.html">Earrings</a>
+        </li>
+
+        <li>
+            <a href="bracelets.html">Bracelets</a>
+        </li>
+
+        <li>
+            <a href="bangles.html">Bangles</a>
+        </li>
+
+        <li>
+            <a href="kada.html">Kada</a>
+        </li>
+
+        <li>
+            <a href="bridal-sets.html">Bridal</a>
+        </li>
+
+        <li>
+            <a href="maang-tikka.html">Maang Tikka</a>
+        </li>
+
+        <li>
+            <a href="chains.html">Chains</a>
+        </li>
+
+        <li>
+            <a href="pendants.html" class="active">Pendants</a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+<!-- ======================================================
+     HERO
+====================================================== -->
+
+<section class="hero">
+
+    <video
+        class="hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        poster="images/pendants-hero-model.jpg">
+
+        <source
+            src="images/pendants-campaign.mp4"
+            type="video/mp4">
+
+    </video>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <div class="hero-eyebrow">
+            THE SAJO PENDANT EDIT
+        </div>
+
+        <h1>
+            <span>Pendants /</span>
+            <span>Made to</span>
+            <span>Shine.</span>
+        </h1>
+
+    </div>
+
+    <div class="hero-scroll">
+        Scroll to explore
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     CATEGORY INTRO
+====================================================== -->
+
+<section class="category-intro reveal">
+
+    <div class="section-eyebrow">
+        Discover Your Style
+    </div>
+
+    <h2>
+        A Pendant For<br>
+        Every Story
+    </h2>
+
+    <p>
+        Explore the Sajo Jewellers pendant collection through four
+        carefully curated worlds — Women's, Men's, Silver and Gold.
+        Designed to become a timeless part of your everyday style.
+    </p>
+
+</section>
+
+
+<!-- ======================================================
+     CATEGORY CARDS
+====================================================== -->
+
+<section class="category-grid">
+
+
+    <!-- WOMEN -->
+
+    <a href="#women" class="category-card reveal">
+
+        <img
+            src="images/womens-pendant-model.jpg"
+            alt="Women's Pendants">
+
+        <div class="category-overlay">
+
+            <div class="category-number">
+                01 / COLLECTION
+            </div>
+
+            <h3>
+                Women's
+            </h3>
+
+            <span>
+                Explore Collection
+            </span>
+
+        </div>
+
+    </a>
+
+
+    <!-- MEN -->
+
+    <a href="#men" class="category-card reveal">
+
+        <img
+            src="images/mens-pendant-model.jpg"
+            alt="Men's Pendants">
+
+        <div class="category-overlay">
+
+            <div class="category-number">
+                02 / COLLECTION
+            </div>
+
+            <h3>
+                Men's
+            </h3>
+
+            <span>
+                Explore Collection
+            </span>
+
+        </div>
+
+    </a>
+
+
+    <!-- SILVER -->
+
+    <a href="#silver" class="category-card reveal">
+
+        <img
+            src="images/silver-pendant-model.jpg"
+            alt="Silver Pendants">
+
+        <div class="category-overlay">
+
+            <div class="category-number">
+                03 / COLLECTION
+            </div>
+
+            <h3>
+                Silver
+            </h3>
+
+            <span>
+                Explore Collection
+            </span>
+
+        </div>
+
+    </a>
+
+
+    <!-- GOLD -->
+
+    <a href="#gold" class="category-card reveal">
+
+        <img
+            src="images/gold-pendant-model.jpg"
+            alt="Gold Pendants">
+
+        <div class="category-overlay">
+
+            <div class="category-number">
+                04 / COLLECTION
+            </div>
+
+            <h3>
+                Gold
+            </h3>
+
+            <span>
+                Explore Collection
+            </span>
+
+        </div>
+
+    </a>
+
+</section>
+
+
+<!-- ======================================================
+     WOMEN EDITORIAL
+====================================================== -->
+
+<section class="editorial reveal" id="women">
+
+    <div class="editorial-image">
+
+        <img
+            src="images/womens-pendant-campaign.jpg"
+            alt="Women's Pendant Collection">
+
+    </div>
+
+    <div class="editorial-content">
+
+        <div class="section-eyebrow">
+            The Women's Edit
+        </div>
+
+        <h2>
+            Designed for<br>
+            her moments.
+        </h2>
+
+        <p>
+            Delicate silhouettes, refined details and timeless
+            elegance come together in pendants designed for
+            every chapter of her story.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     WOMEN PRODUCTS
+====================================================== -->
+
+<section class="product-section reveal">
+
+    <div class="product-heading">
+
+        <div>
+            <div class="section-eyebrow">
+                Women's Collection
+            </div>
+
+            <h2>
+                Women's Pendants
+            </h2>
+        </div>
+
+        <p>
+            Curated For Her
+        </p>
+
+    </div>
+
+
+    <div class="product-grid">
+
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img
+                    src="images/womens-pendant-01.jpg"
+                    alt="Women's Pendant">
+
+                <button class="wishlist">
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>
+                    Sajo Classic Pendant
+                </h3>
+
+                <div class="product-price">
+
+                    <span class="current-price">
+                        ₹699
+                    </span>
+
+                    <span class="old-price">
+                        ₹999
+                    </span>
+
+                </div>
+
+                <a href="#" class="view-all">
+                    View Details
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img
+                    src="images/womens-pendant-02.jpg"
+                    alt="Women's Pendant">
+
+                <button class="wishlist">
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>
+                    Sajo Elegant Pendant
+                </h3>
+
+                <div class="product-price">
+
+                    <span class="current-price">
+                        ₹799
+                    </span>
+
+                    <span class="old-price">
+                        ₹1,199
+                    </span>
+
+                </div>
+
+                <a href="#" class="view-all">
+                    View Details
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img
+                    src="images/womens-pendant-03.jpg"
+                    alt="Women's Pendant">
+
+                <button class="wishlist">
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>
+                    Sajo Signature Pendant
+                </h3>
+
+                <div class="product-price">
+
+                    <span class="current-price">
+                        ₹899
+                    </span>
+
+                    <span class="old-price">
+                        ₹1,299
+                    </span>
+
+                </div>
+
+                <a href="#" class="view-all">
+                    View Details
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img
+                    src="images/womens-pendant-04.jpg"
+                    alt="Women's Pendant">
+
+                <button class="wishlist">
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>
+                    Sajo Pearl Pendant
+                </h3>
+
+                <div class="product-price">
+
+                    <span class="current-price">
+                        ₹999
+                    </span>
+
+                    <span class="old-price">
+                        ₹1,499
+                    </span>
+
+                </div>
+
+                <a href="#" class="view-all">
+                    View Details
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     MEN EDITORIAL
+====================================================== -->
+
+<section class="editorial reveal" id="men">
+
+    <div class="editorial-content">
+
+        <div class="section-eyebrow">
+            The Men's Edit
+        </div>
+
+        <h2>
+            Strength in<br>
+            every detail.
+        </h2>
+
+        <p>
+            Clean lines, confident forms and understated luxury.
+            Discover pendants designed for the modern man.
+        </p>
+
+    </div>
+
+    <div class="editorial-image">
+
+        <img
+            src="images/mens-pendant-campaign.jpg"
+            alt="Men's Pendant Collection">
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     MEN PRODUCTS
+====================================================== -->
+
+<section class="product-section dark-section reveal">
+
+    <div class="product-heading">
+
+        <div>
+
+            <div class="section-eyebrow">
+                Men's Collection
+            </div>
+
+            <h2>
+                Men's Pendants
+            </h2>
+
+        </div>
+
+        <p>
+            Designed For Him
+        </p>
+
+    </div>
+
+
+    <div class="product-grid">
+
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img
+                    src="images/mens-pendant-01.jpg"
+                    alt="Men's Pendant">
+
+                <button class="wishlist">
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>
+                    Sajo Men's Classic
+                </h3>
+
+                <div class="product-price">
+
+                    <span class="current-price">
+                        ₹799
+                    </span>
+
+                    <span class="old-price">
+                        ₹1,199
+                    </span>
+
+                </div>
+
+                <a href="#" class="view-all">
+                    View Details
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img
+                    src="images/mens-pendant-02.jpg"
+                    alt="Men's Pendant">
+
+                <button class="wishlist">
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>
+                    Sajo Men's Bold
+                </h3>
+
+                <div class="product-price">
+
+                    <span class="current-price">
+                        ₹899
+                    </span>
+
+                    <span class="old-price">
+                        ₹1,399
+                    </span>
+
+                </div>
+
+                <a href="#" class="view-all">
+                    View Details
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img
+                    src="images/mens-pendant-03.jpg"
+                    alt="Men's Pendant">
+
+                <button class="wishlist">
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>
+                    Sajo Men's Signature
+                </h3>
+
+                <div class="product-price">
+
+                    <span class="current-price">
+                        ₹999
+                    </span>
+
+                    <span class="old-price">
+                        ₹1,499
+                    </span>
+
+                </div>
+
+                <a href="#" class="view-all">
+                    View Details
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img
+                    src="images/mens-pendant-04.jpg"
+                    alt="Men's Pendant">
+
+                <button class="wishlist">
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>
+                    Sajo Men's Edge
+                </h3>
+
+                <div class="product-price">
+
+                    <span class="current-price">
+                        ₹1,099
+                    </span>
+
+                    <span class="old-price">
+                        ₹1,599
+                    </span>
+
+                </div>
+
+                <a href="#" class="view-all">
+                    View Details
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     SILVER PRODUCTS
+====================================================== -->
+
+<section class="product-section reveal" id="silver">
+
+    <div class="product-heading">
+
+        <div>
+
+            <div class="section-eyebrow">
+                Silver Collection
+            </div>
+
+            <h2>
+                Silver Pendants
+            </h2>
+
+        </div>
+
+        <p>
+            Modern Silver
+        </p>
+
+    </div>
+
+
+    <div class="product-grid">
+
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img
+                    src="images/silver-pendant-01.jpg"
+                    alt="Silver Pendant">
+
+                <button class="wishlist">
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>
+                    Sajo Silver Classic
+                </h3>
+
+                <div class="product-price">
+
+                    <span class="current-price">
+                        ₹599
+                    </span>
+
+                    <span class="old-price">
+                        ₹899
+                    </span>
+
+                </div>
+
+                <a href="#" class="view-all">
+                    View Details
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img
+                    src="images/silver-pendant-02.jpg"
+                    alt="Silver Pendant">
+
+                <button class="wishlist">
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>
+                    Sajo Silver Heart
+                </h3>
+
+                <div class="product-price">
+
+                    <span class="current-price">
+                        ₹699
+                    </span>
+
+                    <span class="old-price">
+                        ₹999
+                    </span>
+
+                </div>
+
+                <a href="#" class="view-all">
+                    View Details
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img
+                    src="images/silver-pendant-03.jpg"
+                    alt="Silver Pendant">
+
+                <button class="wishlist">
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>
+                    Sajo Silver Drop
+                </h3>
+
+                <div class="product-price">
+
+                    <span class="current-price">
+                        ₹749
+                    </span>
+
+                    <span class="old-price">
+                        ₹1,099
+                    </span>
+
+                </div>
+
+                <a href="#" class="view-all">
+                    View Details
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img
+                    src="images/silver-pendant-04.jpg"
+                    alt="Silver Pendant">
+
+                <button class="wishlist">
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>
+                    Sajo Silver Bloom
+                </h3>
+
+                <div class="product-price">
+
+                    <span class="current-price">
+                        ₹799
+                    </span>
+
+                    <span class="old-price">
+                        ₹1,199
+                    </span>
+
+                </div>
+
+                <a href="#" class="view-all">
+                    View Details
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     GOLD PRODUCTS
+====================================================== -->
+
+<section class="product-section dark-section reveal" id="gold">
+
+    <div class="product-heading">
+
+        <div>
+
+            <div class="section-eyebrow">
+                Gold Collection
+            </div>
+
+            <h2>
+                Gold Pendants
+            </h2>
+
+        </div>
+
+        <p>
+            Timeless Gold
+        </p>
+
+    </div>
+
+
+    <div class="product-grid">
+
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img
+                    src="images/gold-pendant-01.jpg"
+                    alt="Gold Pendant">
+
+                <button class="wishlist">
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>
+                    Sajo Gold Classic
+                </h3>
+
+                <div class="product-price">
+
+                    <span class="current-price">
+                        ₹1,499
+                    </span>
+
+                    <span class="old-price">
+                        ₹1,999
+                    </span>
+
+                </div>
+
+                <a href="#" class="view-all">
+                    View Details
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img
+                    src="images/gold-pendant-02.jpg"
+                    alt="Gold Pendant">
+
+                <button class="wishlist">
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>
+                    Sajo Gold Heart
+                </h3>
+
+                <div class="product-price">
+
+                    <span class="current-price">
+                        ₹1,699
+                    </span>
+
+                    <span class="old-price">
+                        ₹2,199
+                    </span>
+
+                </div>
+
+                <a href="#" class="view-all">
+                    View Details
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img
+                    src="images/gold-pendant-03.jpg"
+                    alt="Gold Pendant">
+
+                <button class="wishlist">
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>
+                    Sajo Gold Signature
+                </h3>
+
+                <div class="product-price">
+
+                    <span class="current-price">
+                        ₹1,899
+                    </span>
+
+                    <span class="old-price">
+                        ₹2,499
+                    </span>
+
+                </div>
+
+                <a href="#" class="view-all">
+                    View Details
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img
+                    src="images/gold-pendant-04.jpg"
+                    alt="Gold Pendant">
+
+                <button class="wishlist">
+                    ♡
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>
+                    Sajo Gold Pearl
+                </h3>
+
+                <div class="product-price">
+
+                    <span class="current-price">
+                        ₹2,099
+                    </span>
+
+                    <span class="old-price">
+                        ₹2,799
+                    </span>
+
+                </div>
+
+                <a href="#" class="view-all">
+                    View Details
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     3D PENDANT SHOWCASE
+====================================================== -->
+
+<section class="showcase reveal">
+
+    <div class="section-eyebrow">
+        The Sajo Signature
+    </div>
+
+    <h2>
+        Made to be<br>
+        remembered.
+    </h2>
+
+    <div class="pendant-stage">
+
+        <div class="pendant-orbit"></div>
+
+        <div class="pendant-jewel">
+
+            <img
+                src="images/infinite-loop-pendant.jpg"
+                alt="Sajo Signature Pendant">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     ASSISTANCE
+====================================================== -->
+
+<section class="assistance reveal">
+
+    <div>
+
+        <div class="section-eyebrow">
+            Personal Assistance
+        </div>
+
+        <h2>
+            Need help<br>
+            choosing?
+        </h2>
+
+    </div>
+
+    <div class="assistance-text">
+
+        <p>
+            Choosing the perfect pendant should feel personal.
+            Talk to our Sajo Jewellers team for help with
+            designs, metals, styling and gifting.
+        </p>
+
+        <a
+            href="https://wa.me/916398341558?text=Hello%20Sajo%20Jewellers%2C%20I%20would%20like%20help%20choosing%20a%20pendant."
+            class="whatsapp-btn"
+            target="_blank">
+
+            WhatsApp Us →
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     TRUST
+====================================================== -->
+
+<section class="trust reveal">
+
+    <div class="trust-item">
+
+        <div class="trust-icon">
+            ✦
+        </div>
+
+        <h3>
+            Authentic Jewellery
+        </h3>
+
+        <p>
+            Crafted With Care
+        </p>
+
+    </div>
+
+
+    <div class="trust-item">
+
+        <div class="trust-icon">
+            ◇
+        </div>
+
+        <h3>
+            Premium Quality
+        </h3>
+
+        <p>
+            Made To Last
+        </p>
+
+    </div>
+
+
+    <div class="trust-item">
+
+        <div class="trust-icon">
+            ♢
+        </div>
+
+        <h3>
+            Secure Delivery
+        </h3>
+
+        <p>
+            Delivered Safely
+        </p>
+
+    </div>
+
+
+    <div class="trust-item">
+
+        <div class="trust-icon">
+            ♡
+        </div>
+
+        <h3>
+            Personal Support
+        </h3>
+
+        <p>
+            Here For You
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     FOOTER
+====================================================== -->
+
+<footer class="footer">
+
+    <div class="footer-top">
+
+
+        <div class="footer-brand">
+
+            <h2>
+                SAJO
+            </h2>
+
+            <p>
+                Timeless jewellery designed to become
+                part of your story. Discover refined
+                gold and silver jewellery at Sajo Jewellers.
+            </p>
+
+        </div>
+
+
+        <div class="footer-col">
+
+            <h4>
+                Explore
+            </h4>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="rings.html">
+                Rings
+            </a>
+
+            <a href="necklace.html">
+                Necklaces
+            </a>
+
+            <a href="earrings.html">
+                Earrings
+            </a>
+
+            <a href="bracelets.html">
+                Bracelets
+            </a>
+
+        </div>
+
+
+        <div class="footer-col">
+
+            <h4>
+                Collections
+            </h4>
+
+            <a href="bangles.html">
+                Bangles
+            </a>
+
+            <a href="kada.html">
+                Kada
+            </a>
+
+            <a href="chains.html">
+                Chains
+            </a>
+
+            <a href="pendants.html">
+                Pendants
+            </a>
+
+            <a href="bridal-sets.html">
+                Bridal
+            </a>
+
+            <a href="maang-tikka.html">
+                Maang Tikka
+            </a>
+
+        </div>
+
+
+        <div class="footer-col">
+
+            <h4>
+                Connect
+            </h4>
+
+            <a
+                href="https://wa.me/916398341558"
+                target="_blank">
+                WhatsApp
+            </a>
+
+            <a href="#">
+                Instagram
+            </a>
+
+            <a href="#">
+                Contact
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 Sajo Jewellers. All Rights Reserved.
+        </span>
+
+        <span>
+            Crafted With Intention.
+        </span>
+
+    </div>
+
+</footer>
+
+
+<!-- ======================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script>
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+const revealElements =
+document.querySelectorAll('.reveal');
+
+const revealObserver =
+new IntersectionObserver(
+    (entries) => {
+
+        entries.forEach(entry => {
+
+            if(entry.isIntersecting){
+
+                entry.target.classList.add('show');
+
+                revealObserver.unobserve(entry.target);
+
+            }
+
+        });
+
+    },
+    {
+        threshold:0.12
+    }
+);
+
+
+revealElements.forEach(element => {
+
+    revealObserver.observe(element);
+
+});
+
+
+/* =========================================================
+   WISHLIST
+========================================================= */
+
+const wishlistButtons =
+document.querySelectorAll('.wishlist');
+
+
+wishlistButtons.forEach(button => {
+
+    button.addEventListener('click', () => {
+
+        if(button.innerHTML.trim() === '♡'){
+
+            button.innerHTML = '♥';
+
+        }else{
+
+            button.innerHTML = '♡';
+
+        }
+
+    });
+
+});
+
+</script>
+
+
+</body>
+
+</html>

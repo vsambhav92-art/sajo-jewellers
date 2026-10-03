@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Explore Sajo Jewellers premium men's jewellery collection featuring timeless gold and silver designs.">
+
+    <title>Men's Jewellery | Sajo Jewellers</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            background: #071b16;
+            color: #f7f0df;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* ANNOUNCEMENT */
+
+        .announcement {
+            background: #c9a45c;
+            color: #071b16;
+            text-align: center;
+            padding: 9px 15px;
+            font-size: 12px;
+            letter-spacing: 2px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* HEADER */
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(7, 27, 22, 0.97);
+            border-bottom: 1px solid rgba(201, 164, 92, 0.35);
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar {
+            max-width: 1400px;
+            margin: auto;
+            padding: 18px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        .brand {
+            min-width: 145px;
+            color: #c9a45c;
+            line-height: 1;
+        }
+
+        .brand strong {
+            display: block;
+            font-size: 24px;
+            letter-spacing: 4px;
+        }
+
+        .brand span {
+            display: block;
+            margin-top: 5px;
+            font-size: 10px;
+            letter-spacing: 5px;
+            color: #f7f0df;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: #f7f0df;
+            font-size: 13px;
+            transition: 0.3s;
+            white-space: nowrap;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #c9a45c;
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 12px;
+            font-size: 18px;
+        }
+
+        /* BREADCRUMB */
+
+        .breadcrumb {
+            background: #f7f0df;
+            color: #52615b;
+            padding: 14px 6%;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        .breadcrumb span {
+            color: #c9a45c;
+        }
+
+        /* PRODUCT DETAIL */
+
+        .product-detail {
+            background: #071b16;
+            padding: 75px 6% 90px;
+        }
+
+        .product-container {
+            max-width: 1250px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .detail-image {
+            border: 1px solid #c9a45c;
+            padding: 10px;
+            background: #0b241d;
+        }
+
+        .detail-image img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .detail-info {
+            padding: 10px 0;
+        }
+
+        .detail-category {
+            color: #c9a45c;
+            font-size: 11px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        .detail-info h1 {
+            font-size: clamp(42px, 5vw, 68px);
+            font-weight: normal;
+            line-height: 1;
+            margin-bottom: 25px;
+        }
+
+        .detail-info h1 em {
+            color: #c9a45c;
+            font-style: italic;
+        }
+
+        .detail-description {
+            color: #d2cbb9;
+            font-size: 15px;
+            line-height: 1.9;
+            max-width: 570px;
+            margin-bottom: 28px;
+        }
+
+        .price-request {
+            color: #c9a45c;
+            font-size: 15px;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+        }
+
+        /* DETAILS */
+
+        .details-box {
+            border-top: 1px solid rgba(201, 164, 92, 0.35);
+            border-bottom: 1px solid rgba(201, 164, 92, 0.35);
+            margin-bottom: 30px;
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(201, 164, 92, 0.15);
+            font-size: 13px;
+        }
+
+        .detail-row:last-child {
+            border-bottom: none;
+        }
+
+        .detail-row strong {
+            color: #c9a45c;
+            font-size: 10px;
+            letter-spacing: 2px;
+        }
+
+        .detail-row span {
+            color: #eee6d5;
+            text-align: right;
+        }
+
+        /* BUTTONS */
+
+        .detail-buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .whatsapp-btn {
+            background: #c9a45c;
+            color: #071b16;
+            padding: 15px 25px;
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .whatsapp-btn:hover {
+            background: #f7f0df;
+        }
+
+        .back-btn {
+            border: 1px solid #c9a45c;
+            color: #c9a45c;
+            padding: 14px 25px;
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #c9a45c;
+            color: #071b16;
+        }
+
+        /* STORY */
+
+        .story {
+            background: #f7f0df;
+            color: #071b16;
+            padding: 80px 8%;
+            text-align: center;
+        }
+
+        .story small {
+            color: #9a8250;
+            font-size: 11px;
+            letter-spacing: 3px;
+        }
+
+        .story h2 {
+            font-size: 40px;
+            font-weight: normal;
+            margin: 14px 0 20px;
+        }
+
+        .story h2 em {
+            color: #9a8250;
+            font-style: italic;
+        }
+
+        .story p {
+            max-width: 720px;
+            margin: auto;
+            color: #66716c;
+            font-size: 15px;
+            line-height: 1.9;
+        }
+
+        /* TRUST */
+
+        .trust-strip {
+            background: #f7f0df;
+            color: #071b16;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            border-top: 1px solid #ddd3bc;
+            border-bottom: 1px solid #ddd3bc;
+        }
+
+        .trust-item {
+            text-align: center;
+            padding: 28px 15px;
+            border-right: 1px solid #ddd3bc;
+        }
+
+        .trust-item:last-child {
+            border-right: none;
+        }
+
+        .trust-item strong {
+            display: block;
+            color: #9a8250;
+            font-size: 12px;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+
+        .trust-item span {
+            font-size: 12px;
+            color: #66716c;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #071b16;
+            color: #f7f0df;
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        footer .footer-brand {
+            color: #c9a45c;
+            font-size: 25px;
+            letter-spacing: 4px;
+        }
+
+        footer p {
+            color: #aeb5ae;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+
+        footer .copyright {
+            margin-top: 25px;
+            color: #747e77;
+            font-size: 11px;
+        }
+
+        /* TABLET */
+
+        @media (max-width: 1000px) {
+
+            .navbar {
+                flex-direction: column;
+            }
+
+            .product-container {
+                grid-template-columns: 1fr;
+                gap: 45px;
+            }
+
+            .detail-image img {
+                height: 550px;
+            }
+
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 650px) {
+
+            .announcement {
+                font-size: 9px;
+                letter-spacing: 1px;
+            }
+
+            .navbar {
+                padding: 16px 15px;
+            }
+
+            .brand {
+                text-align: center;
+            }
+
+            .nav-links {
+                gap: 10px;
+            }
+
+            .nav-links a {
+                font-size: 10px;
+            }
+
+            .nav-actions {
+                display: none;
+            }
+
+            .product-detail {
+                padding: 45px 5% 65px;
+            }
+
+            .detail-image img {
+                height: 430px;
+            }
+
+            .detail-info h1 {
+                font-size: 43px;
+            }
+
+            .detail-description {
+                font-size: 14px;
+            }
+
+            .detail-buttons {
+                flex-direction: column;
+            }
+
+            .whatsapp-btn,
+            .back-btn {
+                text-align: center;
+                width: 100%;
+            }
+
+            .story {
+                padding: 60px 7%;
+            }
+
+            .story h2 {
+                font-size: 32px;
+            }
+
+            .trust-strip {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .trust-item {
+                border-bottom: 1px solid #ddd3bc;
+            }
+
+            .trust-item:nth-child(2) {
+                border-right: none;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- ANNOUNCEMENT -->
+
+    <div class="announcement">
+        Complimentary Jewellery Consultation • Crafted With Trust • Roorkee, India
+    </div>
+
+
+    <!-- HEADER -->
+
+    <header class="site-header">
+
+        <nav class="navbar">
+
+            <a href="../index.html" class="brand">
+
+                <strong>SAJO</strong>
+                <span>JEWELLERS</span>
+
+            </a>
+
+
+            <div class="nav-links">
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <a href="rings.html">
+                    Rings
+                </a>
+
+                <a href="necklace.html">
+                    Necklaces
+                </a>
+
+                <a href="earrings.html">
+                    Earrings
+                </a>
+
+                <a href="bracelets.html">
+                    Bracelets
+                </a>
+
+                <a href="chains.html">
+                    Chains
+                </a>
+
+                <a href="kada.html">
+                    Kada
+                </a>
+
+                <a href="bangles.html">
+                    Bangles
+                </a>
+
+                <a href="pendants.html">
+                    Pendants
+                </a>
+
+                <a href="anklets.html">
+                    Anklets
+                </a>
+
+                <a href="nose-pins.html">
+                    Nose Pins
+                </a>
+
+                <a href="nath.html">
+                    Nath
+                </a>
+
+                <a href="maang-tikka.html">
+                    Maang Tikka
+                </a>
+
+                <a href="bridal-sets.html">
+                    Bridal Sets
+                </a>
+
+                <a href="mens-jewellery.html"
+                   class="active">
+                    Men's Jewellery
+                </a>
+
+            </div>
+
+
+            <div class="nav-actions">
+                ♡
+                ◉
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- BREADCRUMB -->
+
+    <div class="breadcrumb">
+
+        Home &nbsp; / &nbsp;
+
+        <span>Men's Jewellery</span>
+
+        &nbsp; / &nbsp;
+
+        Product
+
+    </div>
+
+
+    <!-- PRODUCT DETAIL -->
+
+    <section class="product-detail">
+
+        <div class="product-container">
+
+
+            <!-- IMAGE -->
+
+            <div class="detail-image">
+
+                <img
+                    id="productImage"
+                    src="../images/chain.jpg"
+                    alt="Men's Jewellery"
+                >
+
+            </div>
+
+
+            <!-- INFORMATION -->
+
+            <div class="detail-info">
+
+                <div class="detail-category">
+                    SAJO JEWELLERS • MEN'S COLLECTION
+                </div>
+
+
+                <h1 id="productName">
+                    Signature Gold <em>Men's Chain</em>
+                </h1>
+
+
+                <p
+                    class="detail-description"
+                    id="productDescription"
+                >
+                    A classic gold chain designed for everyday
+                    sophistication, timeless style and confident
+                    modern wear.
+                </p>
+
+
+                <div class="price-request">
+                    Price on Request
+                </div>
+
+
+                <!-- DETAILS -->
+
+                <div class="details-box">
+
+                    <div class="detail-row">
+
+                        <strong>
+                            MATERIAL
+                        </strong>
+
+                        <span id="material">
+                            Gold
+                        </span>
+
+                    </div>
+
+
+                    <div class="detail-row">
+
+                        <strong>
+                            DESIGN
+                        </strong>
+
+                        <span id="design">
+                            Signature
+                        </span>
+
+                    </div>
+
+
+                    <div class="detail-row">
+
+                        <strong>
+                            CRAFT
+                        </strong>
+
+                        <span>
+                            Fine Jewellery Craftsmanship
+                        </span>
+
+                    </div>
+
+
+                    <div class="detail-row">
+
+                        <strong>
+                            AVAILABILITY
+                        </strong>
+
+                        <span>
+                            Enquire for Availability
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BUTTONS -->
+
+                <div class="detail-buttons">
+
+                    <a
+                        id="whatsappBtn"
+                        href="https://wa.me/916398341558"
+                        target="_blank"
+                        class="whatsapp-btn"
+                    >
+                        ENQUIRE ON WHATSAPP
+                    </a>
+
+
+                    <a
+                        href="mens-jewellery.html"
+                        class="back-btn"
+                    >
+                        BACK TO MEN'S JEWELLERY
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- STORY -->
+
+    <section class="story">
+
+        <small>
+            THE SAJO MEN'S COLLECTION
+        </small>
+
+        <h2>
+            Timeless Style.
+            <em>Made For Him.</em>
+        </h2>
+
+        <p>
+            Men's jewellery is about confidence, character and
+            personal style. From classic chains and refined
+            bracelets to statement rings and traditional kada
+            designs, the Sajo men's collection brings together
+            pieces made for everyday wear and special occasions.
+        </p>
+
+    </section>
+
+
+    <!-- TRUST -->
+
+    <section class="trust-strip">
+
+        <div class="trust-item">
+
+            <strong>
+                GOLD & SILVER
+            </strong>
+
+            <span>
+                Authentic Jewellery
+            </span>
+
+        </div>
+
+
+        <div class="trust-item">
+
+            <strong>
+                CURATED DESIGNS
+            </strong>
+
+            <span>
+                Thoughtfully Selected
+            </span>
+
+        </div>
+
+
+        <div class="trust-item">
+
+            <strong>
+                PERSONAL SERVICE
+            </strong>
+
+            <span>
+                Dedicated Assistance
+            </span>
+
+        </div>
+
+
+        <div class="trust-item">
+
+            <strong>
+                ROORKEE • INDIA
+            </strong>
+
+            <span>
+                Trusted Jewellery House
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-brand">
+            SAJO JEWELLERS
+        </div>
+
+        <p>
+            Timeless jewellery. Crafted with trust.
+        </p>
+
+        <div class="copyright">
+            © 2026 Sajo Jewellers. All Rights Reserved.
+        </div>
+
+    </footer>
+
+
+    <!-- PRODUCT DATA -->
+
+    <script>
+
+        const products = {
+
+            classic: {
+
+                name: "Signature Gold Men's Chain",
+
+                description:
+                    "A classic gold chain designed for everyday sophistication, timeless style and confident modern wear.",
+
+                material: "Gold",
+
+                design: "Signature",
+
+                image: "../images/chain.jpg",
+
+                message:
+                    "Hello Sajo Jewellers, I am interested in the Signature Gold Men's Chain."
+
+            },
+
+
+            silver: {
+
+                name: "Silver Signature Men's Bracelet",
+
+                description:
+                    "A refined silver bracelet created for a clean, sophisticated and versatile everyday look.",
+
+                material: "Silver",
+
+                design: "Signature",
+
+                image: "../images/bracelet.jpg",
+
+                message:
+                    "Hello Sajo Jewellers, I am interested in the Silver Signature Men's Bracelet."
+
+            },
+
+
+            designer: {
+
+                name: "Heritage Designer Men's Kada",
+
+                description:
+                    "A bold kada inspired by traditional craftsmanship with a refined modern character.",
+
+                material: "Gold / Silver",
+
+                design: "Heritage Designer",
+
+                image: "../images/kada.jpg",
+
+                message:
+                    "Hello Sajo Jewellers, I am interested in the Heritage Designer Men's Kada."
+
+            },
+
+
+            luxury: {
+
+                name: "Luxury Statement Men's Ring",
+
+                description:
+                    "A distinctive statement ring designed for confident styling, timeless appeal and modern elegance.",
+
+                material: "Gold",
+
+                design: "Luxury Statement",
+
+                image: "../images/ring.jpg",
+
+                message:
+                    "Hello Sajo Jewellers, I am interested in the Luxury Statement Men's Ring."
+
+            }
+
+        };
+
+
+        const params =
+            new URLSearchParams(window.location.search);
+
+
+        const productKey =
+            params.get("product") || "classic";
+
+
+        const product =
+            products[productKey] || products.classic;
+
+
+        document.getElementById("productName").innerHTML =
+            product.name;
+
+
+        document.getElementById("productDescription").textContent =
+            product.description;
+
+
+        document.getElementById("material").textContent =
+            product.material;
+
+
+        document.getElementById("design").textContent =
+            product.design;
+
+
+        document.getElementById("productImage").src =
+            product.image;
+
+
+        document.getElementById("productImage").alt =
+            product.name;
+
+
+        document.getElementById("whatsappBtn").href =
+            "https://wa.me/916398341558?text=" +
+            encodeURIComponent(product.message);
+
+
+        document.title =
+            product.name + " | Sajo Jewellers";
+
+    </script>
+
+
+</body>
+
+</html>

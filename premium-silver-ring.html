@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sajo Jewellers | Premium Silver Ring</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            background: #111111;
+            color: #f5f0e6;
+        }
+
+        /* NAVBAR */
+
+        nav {
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 7%;
+            background: #111111;
+            border-bottom: 1px solid #3a3429;
+        }
+
+        .logo {
+            font-size: 25px;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #d4af37;
+        }
+
+        nav a {
+            color: #f5f0e6;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        /* PRODUCT */
+
+        .product-section {
+            max-width: 1200px;
+            margin: auto;
+            padding: 80px 7%;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .product-image {
+            background: #191711;
+            padding: 20px;
+            border: 1px solid #d4af37;
+        }
+
+        .product-image img {
+            width: 100%;
+            display: block;
+        }
+
+        /* INFO */
+
+        .product-info small {
+            color: #d4af37;
+            letter-spacing: 3px;
+        }
+
+        .product-info h1 {
+            font-size: 48px;
+            margin: 20px 0;
+        }
+
+        .description {
+            color: #d8d2c7;
+            font-family: Arial, sans-serif;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .price {
+            color: #d4af37;
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        /* DETAILS */
+
+        .details {
+            border-top: 1px solid #3a3429;
+            border-bottom: 1px solid #3a3429;
+            padding: 20px 0;
+            margin-bottom: 30px;
+        }
+
+        .details p {
+            margin: 10px 0;
+            font-family: Arial, sans-serif;
+            color: #ddd;
+        }
+
+        .details strong {
+            color: #d4af37;
+        }
+
+        /* BUTTONS */
+
+        .btn {
+            display: inline-block;
+            padding: 14px 25px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+
+            background: #d4af37;
+            color: #111111;
+
+            text-decoration: none;
+            font-weight: bold;
+            letter-spacing: 1px;
+
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #f0d77a;
+        }
+
+        .back-btn {
+            background: transparent;
+            color: #f5f0e6;
+            border: 1px solid #d4af37;
+        }
+
+        .back-btn:hover {
+            background: #d4af37;
+            color: #111111;
+        }
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+            padding: 35px;
+            border-top: 1px solid #3a3429;
+            color: #aaa;
+            font-family: Arial, sans-serif;
+        }
+
+        footer span {
+            color: #d4af37;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            nav {
+                padding: 15px 5%;
+            }
+
+            .logo {
+                font-size: 20px;
+            }
+
+            .product-section {
+                grid-template-columns: 1fr;
+                padding: 50px 5%;
+                gap: 40px;
+            }
+
+            .product-info h1 {
+                font-size: 38px;
+            }
+
+            .product-image {
+                padding: 12px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+        <div class="logo">
+            SAJO <span>JEWELLERS</span>
+        </div>
+
+        <a href="rings.html">
+            ← Back to Rings
+        </a>
+
+    </nav>
+
+
+    <!-- PRODUCT SECTION -->
+
+    <section class="product-section">
+
+
+        <!-- IMAGE -->
+
+        <div class="product-image">
+
+            <img
+                src="../images/ring.jpg"
+                alt="Premium Silver Ring"
+            >
+
+        </div>
+
+
+        <!-- INFORMATION -->
+
+        <div class="product-info">
+
+            <small>
+                SAJO JEWELLERS • RINGS
+            </small>
+
+            <h1>
+                Premium Silver Ring
+            </h1>
+
+            <p class="description">
+                A sophisticated silver ring designed for everyday
+                elegance. Crafted with attention to detail and a
+                refined finish, perfect for a timeless look.
+            </p>
+
+            <div class="price">
+                Price on Request
+            </div>
+
+
+            <!-- DETAILS -->
+
+            <div class="details">
+
+                <p>
+                    <strong>Material:</strong>
+                    Silver
+                </p>
+
+                <p>
+                    <strong>Design:</strong>
+                    Sophisticated & Elegant
+                </p>
+
+                <p>
+                    <strong>Quality:</strong>
+                    Premium Craftsmanship
+                </p>
+
+                <p>
+                    <strong>Availability:</strong>
+                    Contact Sajo Jewellers
+                </p>
+
+            </div>
+
+
+            <!-- WHATSAPP -->
+
+            <a
+                href="https://wa.me/916398341558?text=Hello%20Sajo%20Jewellers%2C%20I%20am%20interested%20in%20the%20Premium%20Silver%20Ring."
+                class="btn"
+                target="_blank"
+            >
+                ENQUIRE ON WHATSAPP
+            </a>
+
+
+            <!-- BACK -->
+
+            <a
+                href="rings.html"
+                class="btn back-btn"
+            >
+                BACK TO RINGS
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        © 2026
+        <span>Sajo Jewellers</span>.
+        All Rights Reserved.
+
+    </footer>
+
+
+</body>
+
+</html>

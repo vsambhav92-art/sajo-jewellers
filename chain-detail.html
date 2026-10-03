@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Sajo Jewellers Chain Collection — Explore premium gold and silver chains.">
+
+    <title>Chain Details | Sajo Jewellers</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #071612;
+            color: #f4ead5;
+            font-family: Georgia, "Times New Roman", serif;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .topbar {
+            background: #c9a45c;
+            color: #071612;
+            text-align: center;
+            padding: 9px 15px;
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .navbar {
+            min-height: 82px;
+            padding: 0 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(201, 164, 92, 0.22);
+        }
+
+        .brand {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+
+        .brand span {
+            font-size: 29px;
+            letter-spacing: 7px;
+            color: #d8b56b;
+        }
+
+        .brand small {
+            margin-top: 7px;
+            font-family: Arial, sans-serif;
+            font-size: 8px;
+            letter-spacing: 5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #c8c1b2;
+        }
+
+        .nav-links a:hover {
+            color: #d8b56b;
+        }
+
+        .page {
+            padding: 80px 7%;
+        }
+
+        .breadcrumb {
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: #9e998e;
+            margin-bottom: 45px;
+        }
+
+        .breadcrumb a {
+            color: #d8b56b;
+        }
+
+        .product-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .product-image {
+            position: relative;
+            min-height: 650px;
+            overflow: hidden;
+            background: #101c19;
+            border: 1px solid rgba(201, 164, 92, 0.25);
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            min-height: 650px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .image-label {
+            position: absolute;
+            left: 22px;
+            bottom: 22px;
+            padding: 10px 14px;
+            background: rgba(7, 22, 18, 0.9);
+            color: #d8b56b;
+            font-family: Arial, sans-serif;
+            font-size: 9px;
+            letter-spacing: 2px;
+        }
+
+        .product-content {
+            max-width: 600px;
+        }
+
+        .eyebrow {
+            display: block;
+            margin-bottom: 18px;
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            color: #c9a45c;
+        }
+
+        .product-content h1 {
+            font-size: clamp(45px, 6vw, 72px);
+            line-height: 1;
+            font-weight: 400;
+        }
+
+        .product-content h1 em {
+            color: #d8b56b;
+            font-style: italic;
+        }
+
+        .description {
+            margin-top: 25px;
+            color: #aaa499;
+            font-size: 16px;
+            max-width: 540px;
+        }
+
+        .price {
+            margin-top: 30px;
+            padding: 18px 0;
+            border-top: 1px solid rgba(201, 164, 92, 0.2);
+            border-bottom: 1px solid rgba(201, 164, 92, 0.2);
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: #d8b56b;
+        }
+
+        .details {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            border-top: 1px solid rgba(201, 164, 92, 0.15);
+            border-left: 1px solid rgba(201, 164, 92, 0.15);
+        }
+
+        .detail-box {
+            padding: 22px;
+            border-right: 1px solid rgba(201, 164, 92, 0.15);
+            border-bottom: 1px solid rgba(201, 164, 92, 0.15);
+        }
+
+        .detail-box small {
+            display: block;
+            font-family: Arial, sans-serif;
+            font-size: 8px;
+            letter-spacing: 2px;
+            color: #9d988c;
+            margin-bottom: 7px;
+        }
+
+        .detail-box strong {
+            font-size: 15px;
+            font-weight: 400;
+            color: #f4ead5;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-top: 35px;
+        }
+
+        .gold-btn,
+        .outline-btn {
+            min-height: 52px;
+            padding: 0 25px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            transition: 0.3s;
+        }
+
+        .gold-btn {
+            background: #c9a45c;
+            color: #071612;
+        }
+
+        .gold-btn:hover {
+            background: #e0c27d;
+            transform: translateY(-2px);
+        }
+
+        .outline-btn {
+            border: 1px solid rgba(201, 164, 92, 0.55);
+            color: #d8b56b;
+        }
+
+        .outline-btn:hover {
+            background: rgba(201, 164, 92, 0.08);
+        }
+
+        .story {
+            margin-top: 100px;
+            padding: 80px 0;
+            border-top: 1px solid rgba(201, 164, 92, 0.18);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+        }
+
+        .story h2 {
+            font-size: clamp(38px, 5vw, 58px);
+            font-weight: 400;
+            line-height: 1.05;
+        }
+
+        .story h2 em {
+            color: #d8b56b;
+            font-style: italic;
+        }
+
+        .story p {
+            margin-top: 20px;
+            max-width: 580px;
+            color: #aaa499;
+        }
+
+        .story-card {
+            border: 1px solid rgba(201, 164, 92, 0.25);
+            min-height: 260px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .story-card strong {
+            display: block;
+            font-size: 32px;
+            letter-spacing: 5px;
+            color: #d8b56b;
+        }
+
+        .story-card span {
+            display: block;
+            margin-top: 10px;
+            font-family: Arial, sans-serif;
+            font-size: 9px;
+            letter-spacing: 3px;
+            color: #9e998e;
+        }
+
+        .trust {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-top: 1px solid rgba(201, 164, 92, 0.2);
+            border-bottom: 1px solid rgba(201, 164, 92, 0.2);
+        }
+
+        .trust div {
+            padding: 28px 20px;
+            text-align: center;
+            border-right: 1px solid rgba(201, 164, 92, 0.2);
+        }
+
+        .trust div:last-child {
+            border-right: 0;
+        }
+
+        .trust strong {
+            display: block;
+            color: #d8b56b;
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 2px;
+        }
+
+        .trust span {
+            display: block;
+            margin-top: 6px;
+            color: #9e998e;
+            font-size: 12px;
+        }
+
+        .whatsapp {
+            margin-top: 80px;
+            padding: 80px 30px;
+            text-align: center;
+            background: #c9a45c;
+            color: #071612;
+        }
+
+        .whatsapp .eyebrow {
+            color: #071612;
+        }
+
+        .whatsapp h2 {
+            font-size: clamp(38px, 5vw, 60px);
+            font-weight: 400;
+        }
+
+        .whatsapp p {
+            max-width: 600px;
+            margin: 18px auto 30px;
+        }
+
+        .whatsapp-btn {
+            display: inline-flex;
+            padding: 16px 28px;
+            background: #071612;
+            color: #f4ead5;
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        footer {
+            padding: 35px 7%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            background: #05110e;
+            color: #aaa499;
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 1px;
+        }
+
+        footer a {
+            color: #d8b56b;
+        }
+
+        @media (max-width: 900px) {
+            .nav-links {
+                display: none;
+            }
+
+            .product-layout,
+            .story {
+                grid-template-columns: 1fr;
+            }
+
+            .product-image,
+            .product-image img {
+                min-height: 550px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .page {
+                padding: 55px 5%;
+            }
+
+            .product-image,
+            .product-image img {
+                min-height: 430px;
+            }
+
+            .details,
+            .trust {
+                grid-template-columns: 1fr;
+            }
+
+            .trust div {
+                border-right: 0;
+                border-bottom: 1px solid rgba(201, 164, 92, 0.2);
+            }
+
+            .trust div:last-child {
+                border-bottom: 0;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+
+            .gold-btn,
+            .outline-btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="topbar">
+        ✦ AUTHENTIC GOLD & SILVER JEWELLERY • ROORKEE • INDIA ✦
+    </div>
+
+    <nav class="navbar">
+
+        <a href="../index.html" class="brand">
+            <span>SAJO</span>
+            <small>JEWELLERS</small>
+        </a>
+
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="../index.html#collections">Collections</a>
+            <a href="../index.html#new-arrivals">New Arrivals</a>
+            <a href="../index.html#bridal">Bridal</a>
+            <a href="../index.html#contact">Contact</a>
+        </div>
+
+    </nav>
+
+
+    <main class="page">
+
+        <div class="breadcrumb">
+            <a href="../index.html">HOME</a>
+            &nbsp; / &nbsp;
+            <a href="chains.html">CHAINS</a>
+            &nbsp; / &nbsp;
+            <span id="breadcrumbProduct">PRODUCT</span>
+        </div>
+
+
+        <section class="product-layout">
+
+            <div class="product-image">
+
+                <img
+                    id="productImage"
+                    src="../images/chain.jpg"
+                    alt="Sajo Jewellers Chain"
+                >
+
+                <span class="image-label">
+                    SAJO JEWELLERS • CHAIN COLLECTION
+                </span>
+
+            </div>
+
+
+            <div class="product-content">
+
+                <span class="eyebrow" id="productCategory">
+                    SAJO JEWELLERS • CHAIN
+                </span>
+
+                <h1 id="productName">
+                    Classic
+                    <em>Gold Chain.</em>
+                </h1>
+
+                <p class="description" id="productDescription">
+                    A timeless chain designed for everyday elegance,
+                    refined styling and effortless sophistication.
+                </p>
+
+                <div class="price">
+                    PRICE ON REQUEST • CONTACT SAJO JEWELLERS
+                </div>
+
+
+                <div class="details">
+
+                    <div class="detail-box">
+                        <small>MATERIAL</small>
+                        <strong id="material">Gold</strong>
+                    </div>
+
+                    <div class="detail-box">
+                        <small>DESIGN</small>
+                        <strong id="design">Classic</strong>
+                    </div>
+
+                    <div class="detail-box">
+                        <small>STYLE</small>
+                        <strong id="style">Everyday Luxury</strong>
+                    </div>
+
+                    <div class="detail-box">
+                        <small>AVAILABILITY</small>
+                        <strong>On Enquiry</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="buttons">
+
+                    <a
+                        id="whatsappButton"
+                        href="#"
+                        target="_blank"
+                        class="gold-btn"
+                    >
+                        ENQUIRE ON WHATSAPP →
+                    </a>
+
+                    <a
+                        href="chains.html"
+                        class="outline-btn"
+                    >
+                        ← BACK TO CHAINS
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="story">
+
+            <div>
+
+                <span class="eyebrow">
+                    THE SAJO CHAIN STORY
+                </span>
+
+                <h2>
+                    A chain that becomes
+                    <em>part of your style.</em>
+                </h2>
+
+                <p>
+                    From everyday elegance to special occasions,
+                    the right chain adds a refined finishing touch.
+                    Sajo Jewellers brings together timeless designs
+                    selected with attention to detail and presentation.
+                </p>
+
+            </div>
+
+            <div class="story-card">
+
+                <div>
+                    <strong>SAJO</strong>
+
+                    <span>
+                        GOLD • SILVER • TIMELESS
+                    </span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="trust">
+
+            <div>
+                <strong>QUALITY FOCUS</strong>
+                <span>Attention to material & finish</span>
+            </div>
+
+            <div>
+                <strong>PERSONAL ASSISTANCE</strong>
+                <span>Connect directly with Sajo</span>
+            </div>
+
+            <div>
+                <strong>SECURE ENQUIRY</strong>
+                <span>Ask about availability & pricing</span>
+            </div>
+
+        </section>
+
+
+        <section class="whatsapp">
+
+            <span class="eyebrow">
+                PERSONAL ASSISTANCE
+            </span>
+
+            <h2>
+                Interested in this
+                <strong id="whatsappTitle">chain?</strong>
+            </h2>
+
+            <p>
+                Contact Sajo Jewellers directly for pricing,
+                availability, material details and more information.
+            </p>
+
+            <a
+                id="whatsappButtonBottom"
+                href="#"
+                target="_blank"
+                class="whatsapp-btn"
+            >
+                CHAT ON WHATSAPP →
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <span>
+            © 2026 Sajo Jewellers
+        </span>
+
+        <span>
+            GOLD • SILVER • TIMELESS
+        </span>
+
+        <a href="../index.html">
+            BACK TO HOME ↑
+        </a>
+
+    </footer>
+
+
+    <script>
+
+        const products = {
+
+            classic: {
+                name: "Classic Gold Chain",
+                category: "GOLD • CLASSIC",
+                description:
+                    "A timeless gold chain designed for everyday elegance, refined styling and effortless sophistication.",
+                material: "Gold",
+                design: "Classic",
+                style: "Everyday Luxury"
+            },
+
+            premium: {
+                name: "Premium Gold Chain",
+                category: "GOLD • PREMIUM",
+                description:
+                    "A refined gold chain featuring an elegant design language and sophisticated finish for a premium look.",
+                material: "Gold",
+                design: "Premium",
+                style: "Refined Luxury"
+            },
+
+            silver: {
+                name: "Silver Signature Chain",
+                category: "SILVER • SIGNATURE",
+                description:
+                    "A modern silver chain designed with timeless character, versatility and understated elegance.",
+                material: "Silver",
+                design: "Signature",
+                style: "Modern Elegance"
+            },
+
+            royal: {
+                name: "Royal Edition Chain",
+                category: "GOLD • ROYAL",
+                description:
+                    "A statement-inspired chain designed to bring a distinctive and sophisticated presence to your look.",
+                material: "Gold",
+                design: "Royal",
+                style: "Statement Luxury"
+            }
+
+        };
+
+
+        const params = new URLSearchParams(window.location.search);
+
+        const productKey = params.get("product") || "classic";
+
+        const product = products[productKey] || products.classic;
+
+
+        document.title =
+            product.name + " | Sajo Jewellers";
+
+
+        document.getElementById("breadcrumbProduct").textContent =
+            product.name.toUpperCase();
+
+
+        document.getElementById("productCategory").textContent =
+            "SAJO JEWELLERS • " + product.category;
+
+
+        document.getElementById("productName").innerHTML =
+            product.name.replace(
+                /(.+?)(Gold Chain|Silver Signature Chain|Chain)$/i,
+                "$1<em>$2.</em>"
+            );
+
+
+        document.getElementById("productDescription").textContent =
+            product.description;
+
+
+        document.getElementById("material").textContent =
+            product.material;
+
+
+        document.getElementById("design").textContent =
+            product.design;
+
+
+        document.getElementById("style").textContent =
+            product.style;
+
+
+        document.getElementById("whatsappTitle").textContent =
+            product.name + "?";
+
+
+        const message =
+            "Hello Sajo Jewellers, I am interested in the " +
+            product.name +
+            ". Please share price, availability and details.";
+
+
+        const whatsappURL =
+            "https://wa.me/916398341558?text=" +
+            encodeURIComponent(message);
+
+
+        document.getElementById("whatsappButton").href =
+            whatsappURL;
+
+
+        document.getElementById("whatsappButtonBottom").href =
+            whatsappURL;
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,2296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Explore the Sajo Jewellers Ring Collection — women's, men's, gold and silver rings.">
+
+<title>Sajo Jewellers | The Ring Edit</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap"
+rel="stylesheet">
+
+
+<style>
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f8f4ec;
+    color:#17130f;
+    font-family:"Inter",sans-serif;
+    overflow-x:hidden;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+button{
+    font-family:inherit;
+}
+
+
+/* =========================================================
+   ANNOUNCEMENT
+========================================================= */
+
+.announcement{
+    min-height:34px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:#17130f;
+    color:#e0c58b;
+
+    padding:8px 20px;
+
+    font-size:8px;
+    letter-spacing:2.5px;
+    text-transform:uppercase;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.site-header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    background:rgba(248,244,236,.96);
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid rgba(23,19,15,.1);
+}
+
+.navbar{
+    min-height:82px;
+
+    padding:0 6%;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.brand{
+    display:flex;
+    flex-direction:column;
+}
+
+.brand-main{
+    font-family:"Cormorant Garamond",serif;
+    font-size:31px;
+    letter-spacing:7px;
+    line-height:.9;
+}
+
+.brand-sub{
+    margin-top:7px;
+
+    color:#a17c39;
+
+    font-size:7px;
+    letter-spacing:4px;
+    text-align:center;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+
+    font-size:10px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+}
+
+.nav-links a{
+    position:relative;
+
+    padding:31px 0;
+
+    color:#4d463d;
+
+    transition:.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active{
+    color:#a17c39;
+}
+
+.nav-links a.active::after{
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    right:0;
+    bottom:22px;
+
+    height:1px;
+
+    background:#c4a15e;
+}
+
+.nav-actions{
+    display:flex;
+    gap:16px;
+}
+
+.nav-actions button{
+    border:0;
+    background:none;
+
+    font-size:20px;
+
+    color:#17130f;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.nav-actions button:hover{
+    color:#b28c48;
+}
+
+
+/* =========================================================
+   CINEMATIC HERO
+========================================================= */
+
+.cinematic-hero{
+    min-height:720px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:#17130f;
+
+    color:#f8f4ec;
+}
+
+.hero-video{
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    opacity:.72;
+
+    filter:saturate(.75);
+}
+
+.hero-overlay{
+    position:absolute;
+
+    inset:0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(23,19,15,.96) 0%,
+            rgba(23,19,15,.70) 35%,
+            rgba(23,19,15,.18) 75%,
+            rgba(23,19,15,.45) 100%
+        );
+}
+
+.hero-content{
+    position:relative;
+
+    z-index:2;
+
+    min-height:720px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    padding-left:9%;
+}
+
+.eyebrow{
+    margin-bottom:18px;
+
+    color:#d8b879;
+
+    font-size:9px;
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+}
+
+.hero-content h1{
+    max-width:700px;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:clamp(65px,9vw,125px);
+
+    font-weight:400;
+
+    line-height:.82;
+}
+
+.hero-content h1 em{
+    color:#d8b879;
+    font-style:italic;
+}
+
+.hero-content p{
+    max-width:470px;
+
+    margin-top:28px;
+
+    color:#c8c1b6;
+
+    font-size:12px;
+
+    line-height:1.9;
+}
+
+.hero-button{
+    display:inline-flex;
+
+    width:max-content;
+
+    margin-top:32px;
+
+    padding:15px 23px;
+
+    border:1px solid #d8b879;
+
+    color:#e0c58b;
+
+    font-size:9px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    transition:.35s;
+}
+
+.hero-button:hover{
+    background:#c4a15e;
+    color:#17130f;
+}
+
+
+/* =========================================================
+   CATEGORY INTRO
+========================================================= */
+
+.intro{
+    padding:105px 6% 65px;
+
+    text-align:center;
+}
+
+.intro h2{
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:58px;
+
+    font-weight:400;
+}
+
+.intro p{
+    max-width:650px;
+
+    margin:18px auto 0;
+
+    color:#777066;
+
+    font-size:12px;
+
+    line-height:1.8;
+}
+
+
+/* =========================================================
+   CATEGORY CARDS
+========================================================= */
+
+.categories{
+    padding:0 6% 105px;
+}
+
+.category-grid{
+    max-width:1450px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:16px;
+}
+
+.category-card{
+    position:relative;
+
+    height:520px;
+
+    overflow:hidden;
+
+    background:#ddd;
+}
+
+.category-card img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:transform 1s cubic-bezier(.2,.7,.2,1);
+}
+
+.category-card::after{
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(15,12,9,.88),
+            rgba(15,12,9,.04) 62%
+        );
+}
+
+.category-card:hover img{
+    transform:scale(1.07);
+}
+
+.category-content{
+    position:absolute;
+
+    left:27px;
+    right:27px;
+    bottom:28px;
+
+    z-index:2;
+
+    color:white;
+}
+
+.category-content small{
+    color:#e0c58b;
+
+    font-size:8px;
+
+    letter-spacing:3px;
+}
+
+.category-content h3{
+    margin-top:8px;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:38px;
+
+    font-weight:400;
+}
+
+.category-content p{
+    margin-top:4px;
+
+    color:#ddd4c8;
+
+    font-size:10px;
+}
+
+.category-link{
+    display:inline-flex;
+
+    margin-top:17px;
+
+    padding:10px 14px;
+
+    border:1px solid rgba(255,255,255,.6);
+
+    font-size:8px;
+
+    letter-spacing:1.5px;
+
+    text-transform:uppercase;
+
+    transition:.3s;
+}
+
+.category-link:hover{
+    background:#e0c58b;
+
+    border-color:#e0c58b;
+
+    color:#17130f;
+}
+
+
+/* =========================================================
+   EDITORIAL MODEL SECTION
+========================================================= */
+
+.editorial{
+    min-height:650px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:#17130f;
+
+    color:#f8f4ec;
+}
+
+.editorial-image{
+    position:absolute;
+
+    right:0;
+    top:0;
+
+    width:58%;
+    height:100%;
+}
+
+.editorial-image img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+}
+
+.editorial-image::after{
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        linear-gradient(
+            90deg,
+            #17130f 0%,
+            rgba(23,19,15,.65) 25%,
+            rgba(23,19,15,.05) 70%
+        );
+}
+
+.editorial-content{
+    position:relative;
+
+    z-index:2;
+
+    width:55%;
+
+    min-height:650px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    padding-left:10%;
+}
+
+.editorial-content h2{
+    max-width:550px;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:70px;
+
+    font-weight:400;
+
+    line-height:.9;
+}
+
+.editorial-content h2 em{
+    color:#d8b879;
+}
+
+.editorial-content p{
+    max-width:440px;
+
+    margin-top:25px;
+
+    color:#bdb5a9;
+
+    font-size:11px;
+
+    line-height:1.9;
+}
+
+
+/* =========================================================
+   PRODUCT SECTION
+========================================================= */
+
+.products{
+    padding:105px 6%;
+}
+
+.products-heading{
+    max-width:1400px;
+
+    margin:0 auto 48px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:end;
+}
+
+.products-heading h2{
+    margin-top:10px;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:58px;
+
+    font-weight:400;
+}
+
+.products-heading p{
+    max-width:400px;
+
+    color:#777066;
+
+    font-size:11px;
+
+    line-height:1.8;
+
+    text-align:right;
+}
+
+.product-grid{
+    max-width:1400px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:20px;
+}
+
+.product-card{
+    background:#fffdf9;
+
+    border:1px solid #e1d8ca;
+
+    overflow:hidden;
+
+    transition:
+        transform .45s,
+        box-shadow .45s;
+}
+
+.product-card:hover{
+    transform:translateY(-9px);
+
+    box-shadow:
+        0 25px 60px rgba(23,19,15,.13);
+}
+
+.product-image{
+    height:390px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:#eee7da;
+}
+
+.product-image img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:transform .7s;
+}
+
+.product-card:hover .product-image img{
+    transform:scale(1.06);
+}
+
+.badge{
+    position:absolute;
+
+    top:14px;
+    left:14px;
+
+    z-index:3;
+
+    padding:8px 11px;
+
+    background:#17130f;
+
+    color:#e0c58b;
+
+    font-size:8px;
+
+    letter-spacing:1.5px;
+}
+
+.wishlist{
+    position:absolute;
+
+    right:14px;
+    top:14px;
+
+    z-index:3;
+
+    width:38px;
+    height:38px;
+
+    border:1px solid rgba(255,255,255,.7);
+
+    background:rgba(23,19,15,.75);
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:18px;
+}
+
+.wishlist:hover{
+    background:#c4a15e;
+    color:#17130f;
+}
+
+.product-info{
+    padding:23px;
+}
+
+.product-category{
+    color:#a17c39;
+
+    font-size:8px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+}
+
+.product-name{
+    margin-top:8px;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:27px;
+
+    font-weight:500;
+}
+
+.product-description{
+    margin-top:8px;
+
+    color:#777066;
+
+    font-size:10px;
+
+    line-height:1.7;
+}
+
+.price-row{
+    margin-top:20px;
+
+    padding-top:16px;
+
+    border-top:1px solid #e4dccf;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+}
+
+.price{
+    font-size:12px;
+
+    font-weight:600;
+}
+
+.old-price{
+    margin-left:6px;
+
+    color:#999;
+
+    font-size:10px;
+
+    text-decoration:line-through;
+}
+
+.view-details{
+    padding:10px 13px;
+
+    background:#17130f;
+
+    color:#f8f4ec;
+
+    font-size:8px;
+
+    letter-spacing:1.4px;
+
+    text-transform:uppercase;
+
+    transition:.3s;
+}
+
+.view-details:hover{
+    background:#c4a15e;
+
+    color:#17130f;
+}
+
+
+/* =========================================================
+   3D JEWELLERY SHOWCASE
+========================================================= */
+
+.showcase{
+    padding:110px 6%;
+
+    background:#eee7da;
+
+    text-align:center;
+}
+
+.showcase h2{
+    margin-top:10px;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:58px;
+
+    font-weight:400;
+}
+
+.showcase p{
+    max-width:600px;
+
+    margin:15px auto 45px;
+
+    color:#777066;
+
+    font-size:11px;
+
+    line-height:1.8;
+}
+
+.ring-stage{
+    width:280px;
+    height:280px;
+
+    margin:auto;
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    perspective:1000px;
+}
+
+.ring-stage img{
+    width:230px;
+    height:230px;
+
+    object-fit:contain;
+
+    filter:drop-shadow(
+        0 25px 25px rgba(23,19,15,.18)
+    );
+
+    animation:
+        ringFloat 4s ease-in-out infinite,
+        ringRotate 8s ease-in-out infinite alternate;
+}
+
+@keyframes ringFloat{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+}
+
+@keyframes ringRotate{
+
+    0%{
+        rotate:-4deg;
+    }
+
+    100%{
+        rotate:4deg;
+    }
+
+}
+
+.stage-glow{
+    position:absolute;
+
+    width:230px;
+    height:60px;
+
+    bottom:5px;
+
+    border-radius:50%;
+
+    background:rgba(196,161,94,.18);
+
+    filter:blur(25px);
+
+    animation:glow 4s ease-in-out infinite;
+}
+
+@keyframes glow{
+
+    0%,100%{
+        transform:scale(.85);
+        opacity:.5;
+    }
+
+    50%{
+        transform:scale(1.1);
+        opacity:1;
+    }
+
+}
+
+
+/* =========================================================
+   ASSISTANCE
+========================================================= */
+
+.assistance{
+    padding:90px 6%;
+
+    background:#17130f;
+
+    color:#f8f4ec;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:40px;
+}
+
+.assistance h2{
+    margin-top:10px;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:52px;
+
+    font-weight:400;
+}
+
+.assistance h2 em{
+    color:#d8b879;
+}
+
+.assistance p{
+    max-width:570px;
+
+    margin-top:12px;
+
+    color:#aaa298;
+
+    font-size:11px;
+
+    line-height:1.8;
+}
+
+.whatsapp-btn{
+    white-space:nowrap;
+
+    padding:15px 22px;
+
+    border:1px solid #c4a15e;
+
+    color:#e0c58b;
+
+    font-size:9px;
+
+    letter-spacing:1.5px;
+
+    text-transform:uppercase;
+
+    transition:.3s;
+}
+
+.whatsapp-btn:hover{
+    background:#c4a15e;
+
+    color:#17130f;
+}
+
+
+/* =========================================================
+   TRUST
+========================================================= */
+
+.trust{
+    padding:30px 6%;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    background:#f8f4ec;
+
+    border-top:1px solid #ddd4c5;
+    border-bottom:1px solid #ddd4c5;
+}
+
+.trust-item{
+    text-align:center;
+
+    padding:10px 20px;
+
+    border-right:1px solid #ddd4c5;
+}
+
+.trust-item:last-child{
+    border:0;
+}
+
+.trust-item strong{
+    display:block;
+
+    font-size:9px;
+
+    letter-spacing:1.5px;
+}
+
+.trust-item span{
+    display:block;
+
+    margin-top:6px;
+
+    color:#888078;
+
+    font-size:9px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+    padding:55px 6%;
+
+    background:#17130f;
+
+    color:#777066;
+
+    text-align:center;
+}
+
+.footer-logo{
+    color:#e0c58b;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:28px;
+
+    letter-spacing:5px;
+}
+
+footer p{
+    margin-top:12px;
+
+    font-size:8px;
+
+    letter-spacing:2px;
+}
+
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+.reveal{
+    opacity:0;
+
+    transform:translateY(30px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+}
+
+.reveal.show{
+    opacity:1;
+
+    transform:translateY(0);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:1000px){
+
+    .nav-links{
+        gap:15px;
+    }
+
+    .category-grid,
+    .product-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .hero-content{
+        padding-left:7%;
+    }
+
+}
+
+@media(max-width:650px){
+
+    .announcement{
+        font-size:7px;
+        letter-spacing:1.5px;
+    }
+
+    .navbar{
+        min-height:70px;
+        padding:0 5%;
+    }
+
+    .brand-main{
+        font-size:25px;
+    }
+
+    .nav-links{
+        display:none;
+    }
+
+    .cinematic-hero{
+        min-height:650px;
+    }
+
+    .hero-content{
+        min-height:650px;
+
+        padding:
+        0 7% 65px;
+
+        justify-content:end;
+
+        text-align:center;
+    }
+
+    .hero-content h1{
+        font-size:65px;
+    }
+
+    .hero-content p{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .hero-button{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .intro{
+        padding:75px 6% 50px;
+    }
+
+    .intro h2{
+        font-size:45px;
+    }
+
+    .categories{
+        padding:0 5% 75px;
+    }
+
+    .category-grid,
+    .product-grid{
+        grid-template-columns:1fr;
+    }
+
+    .category-card{
+        height:480px;
+    }
+
+    .editorial{
+        min-height:650px;
+    }
+
+    .editorial-image{
+        width:100%;
+        height:70%;
+    }
+
+    .editorial-image::after{
+        background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            #17130f 90%
+        );
+    }
+
+    .editorial-content{
+        width:100%;
+        min-height:650px;
+
+        padding:
+        0 7% 60px;
+
+        justify-content:end;
+
+        text-align:center;
+    }
+
+    .editorial-content h2{
+        font-size:52px;
+    }
+
+    .products{
+        padding:75px 5%;
+    }
+
+    .products-heading{
+        display:block;
+    }
+
+    .products-heading h2{
+        font-size:46px;
+    }
+
+    .products-heading p{
+        margin-top:12px;
+        text-align:left;
+    }
+
+    .product-image{
+        height:430px;
+    }
+
+    .showcase{
+        padding:80px 5%;
+    }
+
+    .showcase h2{
+        font-size:45px;
+    }
+
+    .assistance{
+        padding:70px 5%;
+
+        display:block;
+
+        text-align:center;
+    }
+
+    .assistance h2{
+        font-size:43px;
+    }
+
+    .whatsapp-btn{
+        display:inline-flex;
+
+        margin-top:25px;
+    }
+
+    .trust{
+        grid-template-columns:1fr 1fr;
+
+        padding:15px 3%;
+    }
+
+    .trust-item{
+        padding:18px 8px;
+
+        border-right:0;
+        border-bottom:1px solid #ddd4c5;
+    }
+
+    .trust-item:nth-child(odd){
+        border-right:1px solid #ddd4c5;
+    }
+
+    .trust-item:nth-child(3),
+    .trust-item:nth-child(4){
+        border-bottom:0;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     ANNOUNCEMENT
+========================================================= -->
+
+<div class="announcement">
+
+✦ AUTHENTIC GOLD & SILVER JEWELLERY
+&nbsp; • &nbsp;
+ROORKEE • INDIA
+&nbsp; • &nbsp;
+CRAFTED FOR MOMENTS THAT MATTER ✦
+
+</div>
+
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<header class="site-header">
+
+<nav class="navbar">
+
+<a href="index.html" class="brand">
+
+<span class="brand-main">
+SAJO
+</span>
+
+<span class="brand-sub">
+JEWELLERS
+</span>
+
+</a>
+
+
+<div class="nav-links">
+
+<a href="index.html">
+Home
+</a>
+
+<a href="rings.html" class="active">
+Rings
+</a>
+
+<a href="necklace.html">
+Necklaces
+</a>
+
+<a href="earrings.html">
+Earrings
+</a>
+
+<a href="bracelets.html">
+Bracelets
+</a>
+
+</div>
+
+
+<div class="nav-actions">
+
+<button>⌕</button>
+<button>♡</button>
+<button>◇</button>
+
+</div>
+
+</nav>
+
+</header>
+
+
+<!-- =========================================================
+     CINEMATIC VIDEO HERO
+========================================================= -->
+
+<section class="cinematic-hero">
+
+
+<!--
+IMPORTANT:
+Put your future campaign video here:
+
+images/rings-women-campaign.mp4
+
+For now poster image will be visible.
+-->
+
+<video
+class="hero-video"
+autoplay
+muted
+loop
+playsinline
+poster="images/rings-hero-model.jpg">
+
+<source
+src="images/rings-women-campaign.mp4"
+type="video/mp4">
+
+</video>
+
+
+<div class="hero-overlay"></div>
+
+
+<div class="hero-content reveal">
+
+<div class="eyebrow">
+THE SAJO RING EDIT
+</div>
+
+<h1>
+
+Rings
+<br>
+<em>Made to</em>
+<br>
+Remember.
+
+</h1>
+
+<p>
+
+From delicate silhouettes to bold statement pieces,
+discover rings designed for moments that deserve
+to be remembered.
+
+</p>
+
+<a
+href="#categories"
+class="hero-button">
+
+Explore The Collection →
+
+</a>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     INTRO
+========================================================= -->
+
+<section class="intro reveal">
+
+<div class="eyebrow">
+DISCOVER YOUR STYLE
+</div>
+
+<h2>
+A Ring For Every Story
+</h2>
+
+<p>
+
+Explore the Sajo Jewellers ring collection through
+four carefully curated worlds — Women's, Men's,
+Silver and Gold.
+
+</p>
+
+</section>
+
+
+<!-- =========================================================
+     CATEGORIES
+========================================================= -->
+
+<section
+class="categories"
+id="categories">
+
+
+<div class="category-grid">
+
+
+<!-- WOMEN -->
+
+<a
+href="#women"
+class="category-card reveal">
+
+<img
+src="images/womens-ring-model.jpg"
+alt="Women's Rings">
+
+<div class="category-content">
+
+<small>
+01 • COLLECTION
+</small>
+
+<h3>
+Women's Rings
+</h3>
+
+<p>
+Elegant. Feminine. Timeless.
+</p>
+
+<span class="category-link">
+Explore Women's →
+</span>
+
+</div>
+
+</a>
+
+
+<!-- MEN -->
+
+<a
+href="#men"
+class="category-card reveal">
+
+<img
+src="images/mens-ring-model.jpg"
+alt="Men's Rings">
+
+<div class="category-content">
+
+<small>
+02 • COLLECTION
+</small>
+
+<h3>
+Men's Rings
+</h3>
+
+<p>
+Bold. Refined. Confident.
+</p>
+
+<span class="category-link">
+Explore Men's →
+</span>
+
+</div>
+
+</a>
+
+
+<!-- SILVER -->
+
+<a
+href="#silver"
+class="category-card reveal">
+
+<img
+src="images/silver-ring-model.jpg"
+alt="Silver Rings">
+
+<div class="category-content">
+
+<small>
+03 • COLLECTION
+</small>
+
+<h3>
+Silver Rings
+</h3>
+
+<p>
+Modern everyday elegance.
+</p>
+
+<span class="category-link">
+Explore Silver →
+</span>
+
+</div>
+
+</a>
+
+
+<!-- GOLD -->
+
+<a
+href="#gold"
+class="category-card reveal">
+
+<img
+src="images/gold-ring-model.jpg"
+alt="Gold Rings">
+
+<div class="category-content">
+
+<small>
+04 • COLLECTION
+</small>
+
+<h3>
+Gold Rings
+</h3>
+
+<p>
+Classic luxury, beautifully crafted.
+</p>
+
+<span class="category-link">
+Explore Gold →
+</span>
+
+</div>
+
+</a>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     WOMEN EDITORIAL
+========================================================= -->
+
+<section class="editorial">
+
+
+<div class="editorial-image">
+
+<img
+src="images/womens-ring-campaign.jpg"
+alt="Women's Ring Campaign">
+
+</div>
+
+
+<div class="editorial-content reveal">
+
+<div class="eyebrow">
+THE WOMEN'S EDIT
+</div>
+
+<h2>
+
+Designed for
+<br>
+<em>her moments.</em>
+
+</h2>
+
+<p>
+
+Discover elegant rings that move effortlessly
+from everyday beauty to unforgettable occasions.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     WOMEN PRODUCTS
+========================================================= -->
+
+<section
+class="products"
+id="women">
+
+
+<div class="products-heading reveal">
+
+<div>
+
+<div class="eyebrow">
+01 • WOMEN'S RINGS
+</div>
+
+<h2>
+Women's Collection
+</h2>
+
+</div>
+
+<p>
+
+Every women's ring we add will appear here,
+so the collection can grow without changing
+the website structure.
+
+</p>
+
+</div>
+
+
+<div class="product-grid">
+
+
+<!-- PRODUCT 01 -->
+
+<article class="product-card reveal">
+
+<div class="product-image">
+
+<span class="badge">
+NEW
+</span>
+
+<button
+class="wishlist"
+type="button">
+
+♡
+
+</button>
+
+<img
+src="images/infinite-loop-solitaire-ring.jpg"
+alt="Infinite Loop Solitaire Ring">
+
+</div>
+
+
+<div class="product-info">
+
+<div class="product-category">
+Women's Ring
+</div>
+
+<h3 class="product-name">
+Infinite Loop Solitaire Ring
+</h3>
+
+<p class="product-description">
+
+Elegant intertwined design with a
+brilliant solitaire-inspired centre stone.
+
+</p>
+
+
+<div class="price-row">
+
+<div>
+
+<span class="price">
+₹699
+</span>
+
+<span class="old-price">
+₹999
+</span>
+
+</div>
+
+
+<a
+href="ring-detail.html?product=infinite-loop-solitaire"
+class="view-details">
+
+View Details
+
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- FUTURE -->
+
+<article class="product-card reveal">
+
+<div class="product-image">
+
+<img
+src="images/womens-ring-model.png"
+alt="Women's Rings">
+
+</div>
+
+<div class="product-info">
+
+<div class="product-category">
+Women's Ring
+</div>
+
+<h3 class="product-name">
+Coming Soon
+</h3>
+
+<p class="product-description">
+Your next Sajo design will appear here.
+</p>
+
+<div class="price-row">
+
+<span class="price">
+₹—
+</span>
+
+<span class="view-details">
+Coming Soon
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     MEN EDITORIAL
+========================================================= -->
+
+<section
+class="editorial"
+id="men">
+
+
+<div class="editorial-image">
+
+<img
+src="images/mens-ring-campaign.jpg"
+alt="Men's Ring Campaign">
+
+</div>
+
+
+<div class="editorial-content reveal">
+
+<div class="eyebrow">
+THE MEN'S EDIT
+</div>
+
+<h2>
+
+Quiet confidence.
+<br>
+<em>Timeless design.</em>
+
+</h2>
+
+<p>
+
+Refined men's rings designed for those
+who prefer understated luxury.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     MEN PRODUCTS
+========================================================= -->
+
+<section class="products">
+
+<div class="products-heading">
+
+<div>
+
+<div class="eyebrow">
+02 • MEN'S RINGS
+</div>
+
+<h2>
+Men's Collection
+</h2>
+
+</div>
+
+</div>
+
+
+<div class="product-grid">
+
+<article class="product-card reveal">
+
+<div class="product-image">
+
+<img
+src="images/mens-ring-01.jpg"
+alt="Men's Ring">
+
+</div>
+
+<div class="product-info">
+
+<div class="product-category">
+Men's Ring
+</div>
+
+<h3 class="product-name">
+Coming Soon
+</h3>
+
+<p class="product-description">
+Premium men's designs coming soon.
+</p>
+
+<div class="price-row">
+
+<span class="price">
+₹—
+</span>
+
+<span class="view-details">
+Coming Soon
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     SILVER
+========================================================= -->
+
+<section
+class="products"
+id="silver">
+
+<div class="products-heading">
+
+<div>
+
+<div class="eyebrow">
+03 • SILVER RINGS
+</div>
+
+<h2>
+Silver Collection
+</h2>
+
+</div>
+
+<p>
+Modern silver jewellery designed for effortless
+everyday elegance.
+</p>
+
+</div>
+
+
+<div class="product-grid">
+
+<article class="product-card reveal">
+
+<div class="product-image">
+
+<img
+src="images/silver-ring-01.jpg"
+alt="Silver Ring">
+
+</div>
+
+<div class="product-info">
+
+<div class="product-category">
+Silver Ring
+</div>
+
+<h3 class="product-name">
+Coming Soon
+</h3>
+
+<p class="product-description">
+Premium silver designs coming soon.
+</p>
+
+<div class="price-row">
+
+<span class="price">
+₹—
+</span>
+
+<span class="view-details">
+Coming Soon
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     GOLD
+========================================================= -->
+
+<section
+class="products"
+id="gold">
+
+<div class="products-heading">
+
+<div>
+
+<div class="eyebrow">
+04 • GOLD RINGS
+</div>
+
+<h2>
+Gold Collection
+</h2>
+
+</div>
+
+<p>
+Timeless gold designs selected for life's
+most cherished moments.
+</p>
+
+</div>
+
+
+<div class="product-grid">
+
+<article class="product-card reveal">
+
+<div class="product-image">
+
+<img
+src="images/gold-ring-01.jpg"
+alt="Gold Ring">
+
+</div>
+
+<div class="product-info">
+
+<div class="product-category">
+Gold Ring
+</div>
+
+<h3 class="product-name">
+Coming Soon
+</h3>
+
+<p class="product-description">
+Premium gold designs coming soon.
+</p>
+
+<div class="price-row">
+
+<span class="price">
+₹—
+</span>
+
+<span class="view-details">
+Coming Soon
+</span>
+
+</div>
+
+</div>
+
+</article>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     3D STYLE SHOWCASE
+========================================================= -->
+
+<section class="showcase">
+
+<div class="eyebrow">
+THE SAJO SIGNATURE
+</div>
+
+<h2>
+See The Detail
+</h2>
+
+<p>
+
+A subtle interactive jewellery showcase.
+Move your cursor over the page and explore
+the craftsmanship through motion and light.
+
+</p>
+
+
+<div class="ring-stage">
+
+<div class="stage-glow"></div>
+
+<img
+src="images/infinite-loop-solitaire-ring.jpg"
+alt="Infinite Loop Solitaire Ring">
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     ASSISTANCE
+========================================================= -->
+
+<section class="assistance">
+
+<div>
+
+<div class="eyebrow">
+PERSONAL ASSISTANCE
+</div>
+
+<h2>
+
+Find your
+<em>perfect ring.</em>
+
+</h2>
+
+<p>
+
+Need help with size, style or choosing between
+different designs? Talk directly with Sajo Jewellers.
+
+</p>
+
+</div>
+
+
+<a
+href="https://wa.me/916398341558?text=Hello%20Sajo%20Jewellers%2C%20I%20would%20like%20help%20choosing%20a%20ring."
+target="_blank"
+class="whatsapp-btn">
+
+Enquire on WhatsApp →
+
+</a>
+
+</section>
+
+
+<!-- =========================================================
+     TRUST
+========================================================= -->
+
+<section class="trust">
+
+<div class="trust-item">
+
+<strong>
+AUTHENTIC JEWELLERY
+</strong>
+
+<span>
+Gold & Silver Collection
+</span>
+
+</div>
+
+
+<div class="trust-item">
+
+<strong>
+CURATED DESIGNS
+</strong>
+
+<span>
+Premium selected pieces
+</span>
+
+</div>
+
+
+<div class="trust-item">
+
+<strong>
+PERSONAL SERVICE
+</strong>
+
+<span>
+Direct assistance from Sajo
+</span>
+
+</div>
+
+
+<div class="trust-item">
+
+<strong>
+ROORKEE • INDIA
+</strong>
+
+<span>
+Sajo Jewellers
+</span>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+<div class="footer-logo">
+SAJO JEWELLERS
+</div>
+
+© 2026 Sajo Jewellers. All Rights Reserved.
+
+<p>
+GOLD • SILVER • TIMELESS
+</p>
+
+</footer>
+
+
+<script>
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+const observer =
+new IntersectionObserver(
+(entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+},
+{
+threshold:.12
+});
+
+
+document
+.querySelectorAll(".reveal")
+.forEach(el=>{
+
+observer.observe(el);
+
+});
+
+
+/* =========================================================
+   WISHLIST
+========================================================= */
+
+document
+.querySelectorAll(".wishlist")
+.forEach(button=>{
+
+button.addEventListener("click",()=>{
+
+button.textContent =
+button.textContent === "♡"
+? "♥"
+: "♡";
+
+});
+
+});
+
+</script>
+
+
+</body>
+
+</html>

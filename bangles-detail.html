@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Explore Sajo Jewellers premium Bangles collection featuring elegant gold and silver designs.">
+
+    <meta name="keywords"
+        content="Sajo Jewellers, gold bangles, silver bangles, premium bangles, jewellery">
+
+    <title>Sajo Jewellers | Premium Bangles</title>
+
+
+    <style>
+
+        /* ==================================================
+           RESET
+        ================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            background: #071b16;
+            color: #f7f2e8;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        /* ==================================================
+           ANNOUNCEMENT
+        ================================================== */
+
+        .announcement {
+            min-height: 34px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 8px 20px;
+
+            background: #c9a45c;
+            color: #071b16;
+
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            font-weight: 600;
+
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+
+        /* ==================================================
+           NAVBAR
+        ================================================== */
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: rgba(4, 24, 19, 0.97);
+
+            border-bottom: 1px solid rgba(201,164,92,0.28);
+        }
+
+        .navbar {
+            min-height: 86px;
+
+            padding: 0 6%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 30px;
+        }
+
+        .brand {
+            display: flex;
+            flex-direction: column;
+
+            min-width: 155px;
+        }
+
+        .brand-main {
+            font-size: 29px;
+            letter-spacing: 6px;
+            color: #f7f2e8;
+        }
+
+        .brand-sub {
+            margin-top: 2px;
+
+            font-family: Arial, sans-serif;
+            font-size: 8px;
+            letter-spacing: 5px;
+
+            color: #c9a45c;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+        }
+
+        .nav-links a {
+            position: relative;
+            color: #e9e1d2;
+
+            padding: 34px 0;
+
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #d8b66e;
+        }
+
+        .nav-links a.active::after {
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            right: 0;
+            bottom: 23px;
+
+            height: 1px;
+
+            background: #c9a45c;
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 17px;
+
+            font-size: 22px;
+        }
+
+        .nav-actions a {
+            color: #eee6d8;
+            transition: 0.3s;
+        }
+
+        .nav-actions a:hover {
+            color: #c9a45c;
+        }
+
+
+        /* ==================================================
+           BREADCRUMB
+        ================================================== */
+
+        .breadcrumb {
+            padding: 22px 7%;
+
+            background: #f7f2e8;
+
+            color: #777;
+
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .breadcrumb a {
+            color: #765c2a;
+        }
+
+        .breadcrumb span {
+            margin: 0 10px;
+            color: #b99b61;
+        }
+
+
+        /* ==================================================
+           PRODUCT DETAIL
+        ================================================== */
+
+        .product-detail {
+            padding: 90px 7% 110px;
+
+            background:
+                linear-gradient(
+                    120deg,
+                    #061b16,
+                    #0a261f 55%,
+                    #071b16
+                );
+        }
+
+        .product-container {
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+
+        /* ==================================================
+           PRODUCT IMAGE
+        ================================================== */
+
+        .detail-image {
+            position: relative;
+
+            padding: 12px;
+
+            border: 1px solid #c9a45c;
+
+            background: rgba(255,255,255,0.03);
+        }
+
+        .detail-image img {
+            width: 100%;
+
+            height: 600px;
+
+            object-fit: cover;
+
+            display: block;
+        }
+
+
+        /* ==================================================
+           PRODUCT INFO
+        ================================================== */
+
+        .detail-info {
+            position: relative;
+        }
+
+        .detail-category {
+            display: block;
+
+            margin-bottom: 18px;
+
+            color: #c9a45c;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 10px;
+            font-weight: 600;
+
+            letter-spacing: 4px;
+        }
+
+        .detail-info h1 {
+            font-size: clamp(45px, 6vw, 72px);
+
+            font-weight: 400;
+
+            line-height: 1;
+
+            margin-bottom: 25px;
+        }
+
+        .detail-info h1 em {
+            color: #d8b66e;
+
+            font-weight: 400;
+        }
+
+        .detail-description {
+            max-width: 560px;
+
+            color: #c9c5bb;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 14px;
+
+            line-height: 1.9;
+
+            margin-bottom: 30px;
+        }
+
+
+        /* ==================================================
+           PRICE
+        ================================================== */
+
+        .detail-price {
+            color: #d8b66e;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 12px;
+            font-weight: bold;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 30px;
+        }
+
+
+        /* ==================================================
+           DETAILS
+        ================================================== */
+
+        .details-box {
+            border-top: 1px solid rgba(201,164,92,0.35);
+
+            margin-bottom: 32px;
+        }
+
+        .detail-row {
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            padding: 15px 0;
+
+            border-bottom: 1px solid rgba(255,255,255,0.12);
+
+            font-family: Arial, sans-serif;
+
+            font-size: 11px;
+
+            letter-spacing: 1px;
+        }
+
+        .detail-row span:first-child {
+            color: #c9a45c;
+        }
+
+        .detail-row span:last-child {
+            color: #ddd8ce;
+
+            text-align: right;
+        }
+
+
+        /* ==================================================
+           BUTTONS
+        ================================================== */
+
+        .detail-buttons {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 14px;
+        }
+
+        .whatsapp-btn {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            padding: 15px 24px;
+
+            background: #c9a45c;
+
+            color: #071b16;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 10px;
+            font-weight: bold;
+
+            letter-spacing: 1.5px;
+
+            transition: 0.3s;
+        }
+
+        .whatsapp-btn:hover {
+            background: #d8b66e;
+        }
+
+        .back-btn {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            padding: 14px 24px;
+
+            border: 1px solid #c9a45c;
+
+            color: #d8b66e;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 10px;
+            font-weight: bold;
+
+            letter-spacing: 1.5px;
+
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #c9a45c;
+            color: #071b16;
+        }
+
+
+        /* ==================================================
+           STORY
+        ================================================== */
+
+        .story {
+            padding: 85px 7%;
+
+            background: #f7f2e8;
+
+            color: #161914;
+
+            text-align: center;
+        }
+
+        .story small {
+            color: #98752d;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 10px;
+
+            letter-spacing: 3px;
+        }
+
+        .story h2 {
+            margin: 15px 0 20px;
+
+            font-size: 43px;
+
+            font-weight: 400;
+        }
+
+        .story p {
+            max-width: 720px;
+
+            margin: auto;
+
+            color: #777;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 13px;
+
+            line-height: 1.9;
+        }
+
+
+        /* ==================================================
+           TRUST STRIP
+        ================================================== */
+
+        .trust-strip {
+            padding: 24px 7%;
+
+            background: #efe7d7;
+
+            color: #403a30;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            border-bottom: 1px solid #d9cdb8;
+        }
+
+        .trust-item {
+            padding: 8px 25px;
+
+            border-right: 1px solid #cfc1aa;
+
+            text-align: center;
+        }
+
+        .trust-item:last-child {
+            border-right: none;
+        }
+
+        .trust-item strong {
+            display: block;
+
+            margin-bottom: 6px;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 10px;
+
+            letter-spacing: 1.5px;
+        }
+
+        .trust-item span {
+            color: #777;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 10px;
+        }
+
+
+        /* ==================================================
+           FOOTER
+        ================================================== */
+
+        footer {
+            padding: 42px 7%;
+
+            background: #04130f;
+
+            color: #85847d;
+
+            text-align: center;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 11px;
+
+            border-top: 1px solid rgba(201,164,92,0.2);
+        }
+
+        footer .footer-logo {
+            margin-bottom: 12px;
+
+            color: #d8b66e;
+
+            font-family: Georgia, serif;
+
+            font-size: 20px;
+
+            letter-spacing: 4px;
+        }
+
+        footer p {
+            margin-top: 8px;
+            color: #666b66;
+        }
+
+
+        /* ==================================================
+           TABLET
+        ================================================== */
+
+        @media (max-width: 1000px) {
+
+            .nav-links {
+                gap: 15px;
+            }
+
+            .product-container {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .detail-image img {
+                height: 520px;
+            }
+
+        }
+
+
+        /* ==================================================
+           MOBILE
+        ================================================== */
+
+        @media (max-width: 650px) {
+
+            .announcement {
+                font-size: 8px;
+                letter-spacing: 1px;
+            }
+
+            .navbar {
+                min-height: 70px;
+                padding: 0 5%;
+            }
+
+            .brand-main {
+                font-size: 23px;
+            }
+
+            .brand-sub {
+                font-size: 7px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .nav-actions {
+                gap: 10px;
+                font-size: 19px;
+            }
+
+            .breadcrumb {
+                padding: 16px 5%;
+            }
+
+            .product-detail {
+                padding: 60px 5% 75px;
+            }
+
+            .product-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .detail-image img {
+                height: 420px;
+            }
+
+            .detail-info h1 {
+                font-size: 45px;
+            }
+
+            .detail-description {
+                font-size: 13px;
+            }
+
+            .detail-buttons {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .whatsapp-btn,
+            .back-btn {
+                width: 100%;
+            }
+
+            .story {
+                padding: 65px 5%;
+            }
+
+            .story h2 {
+                font-size: 34px;
+            }
+
+            .trust-strip {
+                grid-template-columns: 1fr 1fr;
+
+                padding: 10px 3%;
+            }
+
+            .trust-item {
+                padding: 18px 8px;
+
+                border-right: none;
+                border-bottom: 1px solid #cfc1aa;
+            }
+
+            .trust-item:nth-child(odd) {
+                border-right: 1px solid #cfc1aa;
+            }
+
+            .trust-item:nth-child(3),
+            .trust-item:nth-child(4) {
+                border-bottom: none;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ==================================================
+         ANNOUNCEMENT
+    ================================================== -->
+
+    <div class="announcement">
+
+        ✦ AUTHENTIC GOLD & SILVER JEWELLERY
+        &nbsp; • &nbsp;
+        CRAFTED FOR MOMENTS THAT MATTER
+        &nbsp; • &nbsp;
+        ROORKEE • INDIA ✦
+
+    </div>
+
+
+    <!-- ==================================================
+         NAVBAR
+    ================================================== -->
+
+    <header class="site-header">
+
+        <nav class="navbar">
+
+            <a href="../index.html" class="brand">
+
+                <span class="brand-main">
+                    SAJO
+                </span>
+
+                <span class="brand-sub">
+                    JEWELLERS
+                </span>
+
+            </a>
+
+
+            <div class="nav-links">
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <a href="rings.html">
+                    Rings
+                </a>
+
+                <a href="necklace.html">
+                    Necklaces
+                </a>
+
+                <a href="earrings.html">
+                    Earrings
+                </a>
+
+                <a href="bracelets.html">
+                    Bracelets
+                </a>
+
+                <a href="chains.html">
+                    Chains
+                </a>
+
+                <a href="kada.html">
+                    Kada
+                </a>
+
+                <a href="bangles.html" class="active">
+                    Bangles
+                </a>
+
+                <a href="pendants.html">
+                    Pendants
+                </a>
+
+                <a href="anklets.html">
+                    Anklets
+                </a>
+
+                <a href="nose-pins.html">
+                    Nose Pins
+                </a>
+
+                <a href="nath.html">
+                    Nath
+                </a>
+
+                <a href="maang-tikka.html">
+                    Maang Tikka
+                </a>
+
+            </div>
+
+
+            <div class="nav-actions">
+
+                <a href="../index.html" aria-label="Home">
+                    ⌂
+                </a>
+
+                <a href="bangles.html" aria-label="Bangles">
+                    ♡
+                </a>
+
+                <a href="#contact" aria-label="Contact">
+                    ◇
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ==================================================
+         BREADCRUMB
+    ================================================== -->
+
+    <div class="breadcrumb">
+
+        <a href="../index.html">
+            Home
+        </a>
+
+        <span> / </span>
+
+        <a href="bangles.html">
+            Bangles
+        </a>
+
+        <span> / </span>
+
+        Product
+
+    </div>
+
+
+    <!-- ==================================================
+         PRODUCT DETAIL
+    ================================================== -->
+
+    <section class="product-detail">
+
+        <div class="product-container">
+
+
+            <!-- PRODUCT IMAGE -->
+
+            <div class="detail-image">
+
+                <img
+                    src="../images/bangles.jpg"
+                    alt="Sajo Jewellers Bangles"
+                    id="productImage"
+                >
+
+            </div>
+
+
+            <!-- PRODUCT INFORMATION -->
+
+            <div class="detail-info">
+
+                <span class="detail-category">
+                    SAJO JEWELLERS • BANGLES
+                </span>
+
+
+                <h1 id="productName">
+                    Signature Gold Bangles
+                </h1>
+
+
+                <p
+                    class="detail-description"
+                    id="productDescription"
+                >
+                    Elegant gold bangles crafted with
+                    timeless detailing and refined
+                    finishing for traditional and
+                    festive occasions.
+                </p>
+
+
+                <div class="detail-price">
+                    PRICE ON REQUEST
+                </div>
+
+
+                <div class="details-box">
+
+
+                    <div class="detail-row">
+
+                        <span>
+                            MATERIAL
+                        </span>
+
+                        <span id="material">
+                            Gold
+                        </span>
+
+                    </div>
+
+
+                    <div class="detail-row">
+
+                        <span>
+                            DESIGN
+                        </span>
+
+                        <span id="design">
+                            Signature
+                        </span>
+
+                    </div>
+
+
+                    <div class="detail-row">
+
+                        <span>
+                            CRAFT
+                        </span>
+
+                        <span>
+                            Fine Jewellery Craftsmanship
+                        </span>
+
+                    </div>
+
+
+                    <div class="detail-row">
+
+                        <span>
+                            AVAILABILITY
+                        </span>
+
+                        <span>
+                            On Enquiry
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="detail-buttons">
+
+                    <a
+                        href="#"
+                        class="whatsapp-btn"
+                        id="whatsappBtn"
+                        target="_blank"
+                    >
+                        ENQUIRE ON WHATSAPP →
+                    </a>
+
+
+                    <a
+                        href="bangles.html"
+                        class="back-btn"
+                    >
+                        ← BACK TO BANGLES
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         STORY
+    ================================================== -->
+
+    <section class="story">
+
+        <small>
+            THE SAJO STORY
+        </small>
+
+
+        <h2>
+            Tradition, Crafted Beautifully.
+        </h2>
+
+
+        <p>
+            Every Sajo Jewellers creation is designed
+            to celebrate timeless Indian craftsmanship.
+            Our Bangles collection brings together
+            traditional elegance, refined detailing
+            and graceful designs for moments that
+            deserve something special.
+        </p>
+
+    </section>
+
+
+    <!-- ==================================================
+         TRUST STRIP
+    ================================================== -->
+
+    <section class="trust-strip">
+
+        <div class="trust-item">
+
+            <strong>
+                GOLD & SILVER
+            </strong>
+
+            <span>
+                Premium jewellery collection
+            </span>
+
+        </div>
+
+
+        <div class="trust-item">
+
+            <strong>
+                CURATED DESIGNS
+            </strong>
+
+            <span>
+                Selected with attention to detail
+            </span>
+
+        </div>
+
+
+        <div class="trust-item">
+
+            <strong>
+                PERSONAL SERVICE
+            </strong>
+
+            <span>
+                Direct assistance from Sajo
+            </span>
+
+        </div>
+
+
+        <div class="trust-item">
+
+            <strong>
+                ROORKEE • INDIA
+            </strong>
+
+            <span>
+                Sajo Jewellers
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         FOOTER
+    ================================================== -->
+
+    <footer>
+
+        <div class="footer-logo">
+            SAJO JEWELLERS
+        </div>
+
+        ©️ 2026 Sajo Jewellers.
+        All Rights Reserved.
+
+        <p>
+            GOLD • SILVER • TIMELESS
+        </p>
+
+    </footer>
+
+
+    <!-- ==================================================
+         PRODUCT JAVASCRIPT
+    ================================================== -->
+
+    <script>
+
+        const products = {
+
+            classic: {
+
+                name:
+                    "Signature Gold Bangles",
+
+                description:
+                    "Elegant gold bangles crafted with timeless detailing and refined finishing for traditional and festive occasions.",
+
+                material:
+                    "Gold",
+
+                design:
+                    "Signature",
+
+                message:
+                    "Hello Sajo Jewellers, I am interested in the Signature Gold Bangles."
+
+            },
+
+
+            silver: {
+
+                name:
+                    "Silver Signature Bangles",
+
+                description:
+                    "Refined silver bangles featuring graceful detailing and an elegant finish suitable for everyday and festive styling.",
+
+                material:
+                    "Silver",
+
+                design:
+                    "Signature",
+
+                message:
+                    "Hello Sajo Jewellers, I am interested in the Silver Signature Bangles."
+
+            },
+
+
+            designer: {
+
+                name:
+                    "Heritage Designer Bangles",
+
+                description:
+                    "Heritage-inspired designer bangles featuring intricate detailing and sophisticated craftsmanship.",
+
+                material:
+                    "Gold / Silver",
+
+                design:
+                    "Heritage Designer",
+
+                message:
+                    "Hello Sajo Jewellers, I am interested in the Heritage Designer Bangles."
+
+            },
+
+
+            luxury: {
+
+                name:
+                    "Luxury Statement Bangles",
+
+                description:
+                    "A luxurious statement bangle collection designed for grand bridal celebrations and special occasions.",
+
+                material:
+                    "Gold",
+
+                design:
+                    "Luxury Statement",
+
+                message:
+                    "Hello Sajo Jewellers, I am interested in the Luxury Statement Bangles."
+
+            }
+
+        };
+
+
+        const params =
+            new URLSearchParams(
+                window.location.search
+            );
+
+
+        const product =
+            params.get("product") || "classic";
+
+
+        const selected =
+            products[product] || products.classic;
+
+
+        document.getElementById("productName")
+            .textContent =
+            selected.name;
+
+
+        document.getElementById("productDescription")
+            .textContent =
+            selected.description;
+
+
+        document.getElementById("material")
+            .textContent =
+            selected.material;
+
+
+        document.getElementById("design")
+            .textContent =
+            selected.design;
+
+
+        const whatsappNumber =
+            "916398341558";
+
+
+        const whatsappURL =
+            "https://wa.me/" +
+            whatsappNumber +
+            "?text=" +
+            encodeURIComponent(
+                selected.message
+            );
+
+
+        document.getElementById("whatsappBtn")
+            .href =
+            whatsappURL;
+
+
+        document.title =
+            selected.name +
+            " | Sajo Jewellers";
+
+    </script>
+
+
+</body>
+
+</html>
